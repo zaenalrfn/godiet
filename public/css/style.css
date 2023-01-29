@@ -1,0 +1,780 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --colorBiru: #00b1f1;
+  --colorMerah: #ea444e;
+  --colorOren: #feb546;
+  --colorKrem: #d3dc88;
+  --colorHijau: #74dd78;
+  --colorDongker: #4c6c93;
+  --colorBiruMuda: #b0d3cd;
+  --colorInput: #e4f3f9;
+  --colorTitle: #06283d;
+  --colorText: #939393;
+  --colorAlert: #ffdfd8;
+  --sizeTitle: 24px;
+  --bmicolor1: #2b94ff;
+  --bmiColor2: #00c076;
+  --bmiColor3: #fe921d;
+  --bmiColor4: #fc7419;
+  --bmiColor5: #d84023;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*
+==========================================================
+ bagian header 
+==========================================================
+ */
+#header {
+  margin: 0 10px;
+}
+.titleHU {
+  font-weight: 600;
+  font-size: var(--sizeTitle);
+  color: var(--colorTitle);
+}
+/*  
+========================================================
+bagian fitur menu 
+========================================================
+*/
+#fiturMenu {
+  margin-top: 49px;
+}
+#fiturMenu .card,
+.opsiMenu .card {
+  overflow: hidden;
+  height: 120px;
+  border-radius: 30px;
+}
+#fiturMenu .card img,
+.opsiMenu .card img {
+  position: relative;
+  top: -20px;
+  width: 137.14px;
+  height: 145.77px;
+}
+#fiturMenu .card img[alt="2"],
+.opsiMenu .card img[alt="1"] {
+  top: -10px;
+}
+#fiturMenu .card img[alt="3"],
+.opsiMenu .card img[alt="2"] {
+  left: -30px;
+  top: -10px;
+}
+#fiturMenu .card img[alt="4"],
+.opsiMenu .card img[alt="3"] {
+  left: -25px;
+}
+#fiturMenu .card .card-body {
+  margin-left: -29px;
+  text-align: left;
+}
+#fiturMenu .card-body h2 {
+  font-size: var(--sizeTitle);
+  text-transform: uppercase;
+}
+#fiturMenu .card .card-text {
+  width: 80%;
+  font-size: 10px;
+  font-weight: 500;
+  color: #006f97;
+}
+#fiturMenu .card .text-2 {
+  color: #9f112b;
+}
+#fiturMenu .card .text-3 {
+  color: #707406;
+}
+#fiturMenu .card .text-4 {
+  color: #096b1c;
+}
+#idealTubuh {
+  background-image: linear-gradient(
+    to left top,
+    #006f97,
+    #007fad,
+    #008fc3,
+    #00a0da,
+    #00b1f1
+  );
+}
+#aktiKalori {
+  background-image: linear-gradient(
+    to left top,
+    #ae1c36,
+    #ab1a34,
+    #a81832,
+    #a61630,
+    #a3142e,
+    #a81830,
+    #ac1c32,
+    #b11f34,
+    #bf293a,
+    #cd3241,
+    #dc3b47,
+    #ea444e
+  );
+}
+#menuDiet {
+  background-image: linear-gradient(
+    to left top,
+    #889900,
+    #8fa100,
+    #96a901,
+    #9eb101,
+    #a5b902
+  );
+}
+#tipsDiet {
+  background-image: linear-gradient(
+    to left top,
+    #217230,
+    #268036,
+    #2b8e3d,
+    #319c43,
+    #36aa4a
+  );
+}
+.popup-cek {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  display: flex;
+  top: -1000px;
+}
+.popup-hu {
+  width: 322px;
+  height: 282px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+}
+.popup-hu #popup-input-hu {
+  background-color: var(--colorInput);
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  padding-left: 14px;
+}
+.popup-hu h3 {
+  color: var(--colorTitle);
+  font-size: 20px;
+}
+.popup-hu #popup-input-hu:focus {
+  outline: none;
+}
+.btn-radio {
+  gap: 89px;
+}
+.pop-ya {
+  background-color: var(--colorBiru);
+  padding: 5px 31px;
+  font-size: 18px;
+}
+.form-check-label {
+  font-size: 18px;
+}
+
+/* 
+=================================================================
+BAGIAN PROFIL USER 
+=================================================================
+*/
+
+#profil {
+  height: 337px;
+  box-shadow: -1px 4px 5px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -1px 4px 5px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -1px 4px 5px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 30px 30px;
+  -moz-border-radius: 0px 0px 30px 30px;
+  -webkit-border-radius: 0px 0px 30px 30px;
+  border: 0px solid #000000;
+}
+#profil .arrow-left-setting {
+  margin: 0 20px;
+  margin-top: 31px;
+}
+.arrow-left a,
+.setting a {
+  color: var(--colorTitle);
+}
+.img-profil .img-p {
+  margin-bottom: 15px;
+}
+.img-profil .title-profil {
+  color: var(--colorTitle);
+  font-size: var(--sizeTitle);
+  font-weight: 600;
+}
+.img-profil .status-user {
+  color: #939393;
+  font-size: 16px;
+}
+#info {
+  margin-top: 30px;
+  gap: 30px;
+}
+#info .col-3:nth-child(1),
+#info .col-3:nth-child(2),
+#info .col-3:nth-child(3),
+#info .col-3:nth-child(4) {
+  width: 57.31px;
+  height: 45.55px;
+  border-radius: 15px;
+}
+#info .col-3:nth-child(1) {
+  background-image: linear-gradient(
+    to bottom,
+    #feb546,
+    #f1a93b,
+    #e49c31,
+    #d89026,
+    #cb841a
+  );
+}
+#info .col-3:nth-child(2) {
+  background-image: linear-gradient(
+    to bottom,
+    #74dd78,
+    #6dd271,
+    #67c76a,
+    #60bc64,
+    #5ab15d
+  );
+}
+#info .col-3:nth-child(3) {
+  background-image: linear-gradient(
+    to bottom,
+    #4c6c93,
+    #456489,
+    #3e5c7f,
+    #385476,
+    #314c6c
+  );
+}
+#info .col-3:nth-child(4) {
+  background-image: linear-gradient(
+    to bottom,
+    #ea444e,
+    #da3a47,
+    #ca2f40,
+    #ba2439,
+    #aa1832
+  );
+}
+#info .col-3:nth-child(1) h3,
+#info .col-3:nth-child(2) h3,
+#info .col-3:nth-child(3) h3,
+#info .col-3:nth-child(4) h3 {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 12px;
+}
+#info .col-3:nth-child(1) p,
+#info .col-3:nth-child(2) p,
+#info .col-3:nth-child(3) p,
+#info .col-3:nth-child(4) p {
+  color: #ffffff;
+  font-size: 8px;
+  margin-top: -6px;
+}
+#riwayat {
+  margin: 0 20px;
+  margin-top: 46px;
+  text-align: left;
+}
+.icon-history {
+  font-size: 35px;
+}
+.title-r {
+  line-height: 2px;
+}
+.title-r h2 {
+  font-size: 22px;
+  color: var(--colorTitle);
+}
+.title-r .minggu {
+  font-size: 10px;
+  color: var(--colorText);
+}
+#riwayat .title-riwayat {
+  padding: 14px 0;
+}
+#riwayat .col-md {
+  padding: 18px 0;
+}
+.title-riwayat-akti h3 {
+  font-size: 20px;
+  color: var(--colorTitle);
+}
+.riwayat-waktu-kkal h4,
+.riwayat-waktu-kkal p {
+  font-size: 10px;
+}
+
+/* 
+=======================================================
+BAGIAN EDIT PROFIL
+=======================================================
+*/
+
+#edit-profil {
+  margin: 0 10px;
+}
+#edit-profil .form {
+  margin-top: 38px;
+}
+#edit-profil .btn-edit-profil {
+  margin-top: 21px;
+  margin-bottom: 38px;
+}
+.btn-edit-profil a:nth-child(1) {
+  color: var(--colorTitle);
+  font-size: 18px;
+}
+.btn-edit-profil h2 {
+  font-size: var(--sizeTitle);
+  color: var(--colorTitle);
+  font-weight: 600;
+}
+.btn-edit-profil a:nth-child(2) {
+  color: var(--colorBiru);
+  font-size: 18px;
+}
+.img-edit-profil img {
+  margin-bottom: 21px;
+}
+.form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #999999;
+  font-weight: 400;
+}
+.form input:focus {
+  outline: none;
+}
+.form h5 {
+  font-size: 18px;
+  color: var(--colorTitle);
+  margin-top: 20px;
+}
+.logout {
+  margin-top: 34px;
+  color: var(--colorMerah);
+}
+.logout p a {
+  color: var(--colorMerah);
+  font-size: 18px;
+  font-weight: 500;
+}
+.logout h4 {
+  font-size: 25px;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  display: none;
+  overflow-x: visible;
+}
+.popup .box-popup {
+  width: 322px;
+  height: 212px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+}
+.box-popup h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--colorTitle);
+  margin: 24px;
+}
+.box-popup p {
+  margin: 24px;
+  color: var(--colorText);
+  margin-top: -18px;
+}
+.popup-btn {
+  margin-top: 46px;
+}
+.popup-btn a:nth-child(1),
+.popup-btn a:nth-child(2) {
+  width: 77px;
+  font-size: 18px;
+}
+.popup-btn a:nth-child(1) {
+  background-color: #e6e6e6;
+}
+.popup-btn a:nth-child(2) {
+  background-color: var(--colorMerah);
+}
+
+/* 
+=============================================================
+BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
+=============================================================
+*/
+
+#cek-ideal-tubuh {
+  margin: 0 10px;
+}
+.title-ideal {
+  margin-top: 57px;
+  gap: 56px;
+}
+.title-ideal h2 {
+  font-size: var(--sizeTitle);
+  color: var(--colorTitle);
+  font-weight: 600;
+  margin-top: 12px;
+}
+.title-ideal a {
+  color: var(--colorTitle);
+}
+.cek-input {
+  margin-top: 40px;
+}
+.cek-input h5 {
+  font-size: 15px;
+  color: var(--colorText);
+}
+.input-ideal input {
+  width: 288px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--colorInput);
+  height: 40px;
+  padding-left: 18px;
+}
+.input-ideal .form-select {
+  position: relative;
+  width: 288px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--colorInput);
+  height: 40px;
+}
+.input-ideal option {
+  font-size: 9px;
+}
+.input-ideal .input-alert {
+  background-color: var(--colorAlert);
+  outline: 1px solid var(--colorMerah);
+}
+.input-ideal p,
+.grafik p {
+  margin-top: 15px;
+  color: var(--colorText);
+}
+#myChart {
+  height: 283.32px !important;
+}
+.input-ideal input:focus {
+  outline: none;
+}
+.cek a,
+.cek-kebutuhan-kalori a {
+  width: 238px;
+  height: 40px;
+  background-color: var(--colorBiru);
+  border-radius: 15px;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#bmi {
+  color: var(--colorHijau);
+}
+.bmr-ideal {
+  width: 290px;
+  padding: 40px 15px;
+  background-color: var(--colorInput);
+  border-radius: 15px;
+  border: 1px solid var(--colorBiru);
+}
+.bmr-ideal h4 {
+  font-size: 16px;
+}
+#bmi-deskripsi {
+  color: var(--colorHijau);
+  font-size: 13px;
+}
+.bmi-ideal h4 {
+  font-size: 15px;
+}
+#bmr-hari {
+  color: var(--colorOren);
+}
+.img-bmi {
+  width: 100%;
+  height: 40px;
+  background-color: #2b94ff;
+  background: #3f51b5;
+  /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #3f51b5 0%,
+    #009688 11%,
+    #4caf50 21%,
+    #8bc34a 29%,
+    #cddc39 40%,
+    #ffeb3b 51%,
+    #f44336 81%,
+    #dd2a2a 90%,
+    #b71c1c 100%
+  );
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #3f51b5 0%,
+    #009688 11%,
+    #4caf50 21%,
+    #8bc34a 29%,
+    #cddc39 40%,
+    #ffeb3b 51%,
+    #f44336 81%,
+    #dd2a2a 90%,
+    #b71c1c 100%
+  );
+}
+.indikator-img-bmi {
+  width: 0%;
+  height: 40px;
+  border-right: 3px solid #000000;
+  transition: all 300ms ease;
+}
+.Bb-icon {
+  width: 15px;
+  height: 15px;
+  background-color: var(--colorOren);
+}
+.Tb-icon {
+  width: 15px;
+  height: 15px;
+  background-color: purple;
+}
+.grafik p {
+  font-size: 15px;
+}
+.cek-kebutuhan-kalori a {
+  margin-top: 15px;
+}
+.indikator {
+  position: relative;
+  top: 50%;
+}
+.bmr-wrapper {
+  overflow: hidden;
+}
+
+/* BAGIAN MENU DIET */
+
+.cardMenu {
+  width: 350px;
+}
+.cardMenu img {
+  width: 350px;
+}
+
+.cardMenu .text {
+  width: 350px;
+}
+
+.cardMenu #text {
+  width: 350px;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  border-radius: 33px;
+  box-shadow: #000000;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+}
+#menuMalam {
+  background: rgb(254, 181, 70);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 181, 70, 1) 0%,
+    rgba(205, 130, 16, 1) 35%
+  );
+}
+
+/* BAGIAN AKTIVITAS KALORI */
+
+#fiturMenu-aktivitas {
+  margin-top: 49px;
+}
+.aktivitas {
+  border-radius: 23px;
+  border: none;
+  background-color: var(--colorInput);
+  overflow: hidden;
+}
+#fiturMenu-aktivitas .aktivitas .card-body {
+  background-color: var(--colorBiru);
+}
+/* #fiturMenu-aktivitas .row {
+  display: grid;
+  grid-template-columns: auto auto;
+} */
+#fiturMenu-aktivitas .row:nth-child(1) {
+  margin-bottom: 10rem !important;
+}
+/* aktivitas kalori */
+#hitung {
+  border-radius: 10px;
+  background-color: #00b1f1;
+  border: none;
+}
+.card-aktivitas {
+  background-color: var(--colorBiru);
+  border-radius: 24px;
+}
+.aktivitasHitung {
+  position: fixed;
+  background-color: #ffffff;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 30px;
+}
+#inputPassword2 {
+  border-radius: 10px;
+  background-color: #e4f3f9;
+  border: none;
+}
+.popGerak {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  /* display: none; */
+  display: flex;
+}
+.popGerak .boxGerak {
+  width: 322px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 10px 40px 60px 3px rgba(0, 0, 0, 0.07);
+}
+.gerak-kembali {
+  right: 21px;
+  top: 15px;
+}
+.title-popgerak {
+  font-size: var(--sizeTitle);
+  color: var(--colorTitle);
+  font-weight: 600;
+}
+.p-gerak {
+  color: #84bdd1;
+  font-size: 14px;
+}
+.h4-gerak {
+  color: var(--colorBiru);
+  font-size: 18px;
+  margin-top: -18px;
+}
+
+@keyframes progress {
+  0% {
+    --percentage: 0;
+  }
+  100% {
+    --percentage: var(--value);
+  }
+}
+
+@property --percentage {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: #369;
+  --secondary: #adf;
+  --size: 300px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 2 / 1;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    from 0.75turn at 50% 100%,
+    green 90deg,
+    yellow,
+    red 180deg
+  );
+  mask: radial-gradient(at 50% 100%, white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(at 50% 100%, #0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+  overflow: hidden;
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+[role="progressbar"]::after {
+  content: "";
+  width: 60%;
+  height: 10%;
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  background: radial-gradient(
+      circle at 83.33333% 50%,
+      #fff 4%,
+      #000 0 5%,
+      #0000 0
+    ),
+    conic-gradient(
+      at -20% 50%,
+      #0000 88deg,
+      #000 88.25deg 91.75deg,
+      #0000 92deg
+    );
+  transform-origin: 83.33333% 50%;
+  transform: rotate(calc(var(--value) * 180deg / 100));
+}
