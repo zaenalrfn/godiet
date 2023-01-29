@@ -9,6 +9,8 @@ import AktivitasGerak from "../views/AktivitasGerak.vue";
 import MenuDiet from "../views/MenuDiet.vue";
 import MenuDietPagi from "../views/MenuDietPagi.vue";
 import TipsDiet from "../views/TipsDiet.vue";
+import MenuDietSiang from "../views/MenuDietSiang.vue";
+import MenuDietMalam from "../views/MenuDietMalam.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -58,6 +60,16 @@ const router = createRouter({
       path: "/menuDietPagi",
       name: "menuDietPagi",
       component: MenuDietPagi,
+    },
+    {
+      path: "/menuDietSiang",
+      name: "menuDietSiang",
+      component: MenuDietSiang,
+    },
+    {
+      path: "/menuDietMalam",
+      name: "menuDietMalam",
+      component: MenuDietMalam,
     },
     {
       path: "/tipsDiet",

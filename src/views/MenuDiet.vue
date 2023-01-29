@@ -38,24 +38,28 @@
           </RouterLink>
         </div>
         <div class="col-md-4">
-          <div class="card" id="menuMalam">
-            <div class="d-flex justify-content-center">
-              <img src="/img/english-breakfast-1.png" alt="2" />
-              <div class="card-body pt-4">
-                <h2 class="text-white pt-4">MENU SIANG</h2>
+          <RouterLink to="/menuDietSiang">
+            <div class="card" id="menuMalam">
+              <div class="d-flex justify-content-center">
+                <img src="/img/english-breakfast-1.png" alt="2" />
+                <div class="card-body pt-4">
+                  <h2 class="text-white pt-4">MENU SIANG</h2>
+                </div>
               </div>
             </div>
-          </div>
+          </RouterLink>
         </div>
         <div class="col-md-4">
-          <div class="card" id="aktiKalori">
-            <div class="d-flex justify-content-center">
-              <img src="/img/cutlery-1.png" alt="3" />
-              <div class="card-body pt-4">
-                <h2 class="text-white pt-4">MENU MALAM</h2>
+          <RouterLink to="/menuDietMalam">
+            <div class="card" id="aktiKalori">
+              <div class="d-flex justify-content-center">
+                <img src="/img/cutlery-1.png" alt="3" />
+                <div class="card-body pt-4">
+                  <h2 class="text-white pt-4">MENU MALAM</h2>
+                </div>
               </div>
             </div>
-          </div>
+          </RouterLink>
         </div>
       </div>
     </div>
