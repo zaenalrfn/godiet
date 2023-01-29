@@ -4,7 +4,7 @@
       <div class="row justify-content-between mt-5 mb-4">
         <div class="col" id="title">
           <RouterLink to="/aktivitasKalori">
-            <img src="/img/Vector 2.png" @click="ResetCounter" />
+            <img src="/img/kembali.png" @click="ResetCounter" />
           </RouterLink>
           <div class="d-block text-center">
             <img

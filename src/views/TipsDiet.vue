@@ -9,7 +9,7 @@
                             <div class="header">
                                 <div class="row justify-content-between mt-4 pt-4">
                                         <div class="col-2" id="title">
-                                            <img src="/img/Vector 2.png" />
+                                            <img src="/img/kembali.png" />
                                         </div>
                                     <div class="col-8" id="title">
                                         <h1 class="titleHU text-center">Tips Diet</h1>
@@ -45,7 +45,7 @@
                             <div class="header">
                                 <div class="row justify-content-between mt-4 pt-4">
                                     <div class="col-2" id="title">
-                                        <img src="/img/Vector 2.png" />
+                                        <img src="/img/kembali.png" />
                                     </div>
                                     <div class="col-8" id="title">
                                         <h1 class="titleHU text-center">Tips Diet</h1>
@@ -81,7 +81,7 @@
                             <div class="header">
                                 <div class="row justify-content-between mt-4 pt-4">
                                     <div class="col-2" id="title">
-                                        <img src="/img/Vector 2.png" />
+                                        <img src="/img/kembali.png" />
                                     </div>
                                     <div class="col-8" id="title">
                                         <h1 class="titleHU text-center">Tips Diet</h1>

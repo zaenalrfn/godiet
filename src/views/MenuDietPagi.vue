@@ -4,7 +4,7 @@
       <div class="row justify-content-between mt-5 mb-3">
         <div class="col-2" id="title">
           <RouterLink to="/menuDiet">
-            <img src="/img/Vector 2.png" />
+            <img src="/img/kembali.png" />
           </RouterLink>
         </div>
         <div class="col-8" id="title">
