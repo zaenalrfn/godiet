@@ -18,17 +18,17 @@
       <div class="col cek-input">
         <h5>Berat Badan</h5>
         <div class="input-ideal d-flex align-items-center gap-2">
-          <input type="text" id="berat-badan" v-model="bB_bmr" required />
+          <input type="number" id="berat-badan" v-model="bB_bmr" required />
           <p>kg</p>
         </div>
         <h5>Tinggi Badan</h5>
         <div class="input-ideal d-flex align-items-center gap-2 mt-2">
-          <input type="text" id="tinggi-badan" v-model="tB_bmr" required />
+          <input type="number" id="tinggi-badan" v-model="tB_bmr" required />
           <p>cm</p>
         </div>
         <h5>Umur</h5>
         <div class="input-ideal d-flex align-items-center gap-2 mt-2">
-          <input type="text" id="umur" v-model="u_bmr" required />
+          <input type="number" id="umur" v-model="u_bmr" required />
         </div>
         <div class="input-ideal d-flex align-items-center mt-4">
           <select class="form-select" required id="form-aktivitas">
@@ -57,6 +57,7 @@
             <h4>
               BMR Anda adalah :
               <span id="bmi" class="hasil-bmr">{{ bmr }}</span>
+              kcal
             </h4>
             <h4>
               Anda membutuhkan :

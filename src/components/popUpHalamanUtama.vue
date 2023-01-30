@@ -4,7 +4,7 @@
     <div class="popup-hu">
       <div>
         <h3>Status</h3>
-        <input type="text" id="popup-input-hu" class="mt-1" />
+        <input type="text" id="popup-input-hu" class="mt-1" v-model="status" />
       </div>
       <div class="mt-4">
         <h3>Cek Alergi</h3>
@@ -44,6 +44,11 @@
 <script>
 export default {
   name: "popUpHU",
+  data() {
+    return {
+      status: "",
+    };
+  },
   mounted() {
     let popupCek = document.querySelector(".popup-cek");
     function popUpCek() {
@@ -53,6 +58,14 @@ export default {
     }
     popUpCek();
     this.NotifyCek;
+    if (localStorage.status) {
+      this.status = localStorage.status;
+    }
+  },
+  watch: {
+    status(newStatus) {
+      localStorage.status = newStatus;
+    },
   },
   methods: {
     cekHu() {

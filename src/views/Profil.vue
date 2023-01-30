@@ -28,25 +28,25 @@
             />
           </div>
           <h3 class="title-profil">Bella Amanda</h3>
-          <h5 class="status-user">Pelajar</h5>
+          <h5 class="status-user">{{ stProfil }}</h5>
         </div>
       </div>
     </div>
     <div class="row justify-content-center text-center" id="info">
       <div class="col-3">
-        <h3>52</h3>
+        <h3>{{ bbProfil }}</h3>
         <p>Berat</p>
       </div>
       <div class="col-3">
-        <h3>169</h3>
+        <h3>{{ tbProfil }}</h3>
         <p>Tinggi</p>
       </div>
       <div class="col-3">
-        <h3>18.76</h3>
+        <h3>{{ bmiProfil }}</h3>
         <p>BMI</p>
       </div>
       <div class="col-3">
-        <h3>13.38</h3>
+        <h3>{{ bmrProfil }}</h3>
         <p>BMR</p>
       </div>
     </div>
@@ -130,3 +130,38 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      bmiProfil: null,
+      bmrProfil: null,
+      bbProfil: null,
+      tbProfil: null,
+      stProfil: "",
+    };
+  },
+  mounted() {
+    // console.log(this.stProfil);
+    if (
+      localStorage.getItem("hasilBmi") ||
+      localStorage.getItem("bmr") ||
+      localStorage.getItem("Bb-profil") ||
+      localStorage.getItem("tinggiBadan")
+    ) {
+      try {
+        this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
+        this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
+        this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
+        this.tbProfil = JSON.parse(localStorage.getItem("tinggiBadan"));
+      } catch (e) {
+        localStorage.removeItem("hasilBmi");
+        localStorage.removeItem("bmr");
+        localStorage.removeItem("Bb-profil");
+        localStorage.removeItem("tinggiBadan");
+      }
+    }
+  },
+};
+</script>

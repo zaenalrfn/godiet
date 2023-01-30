@@ -58,9 +58,9 @@
             </div>
           </div>
         </div>
-        <div class="cek-kebutuhan-kalori text-center">
+        <div class="cek-kebutuhan-kalori text-center mb-4">
           <RouterLink to="/kebutuhanKalori">
-            <a href="#" class="btn text-white">LIHAT KEBUTUHAN KALORI</a>
+            <a href="#" class="btn text-white">MENGECEK BMR</a>
           </RouterLink>
         </div>
       </div>
@@ -131,8 +131,10 @@ export default {
 
       const parsedBbHistory = JSON.stringify(this.bmiHistory);
       const parsedBmiPr = JSON.stringify(this.beratBadan);
+      const parsedBmiTb = JSON.stringify(this.tinggiBadan);
       localStorage.setItem("history-bb", parsedBbHistory);
       localStorage.setItem("Bb-profil", parsedBmiPr);
+      localStorage.setItem("Tb-profil", parsedBmiTb);
     },
   },
   mounted() {
@@ -141,7 +143,11 @@ export default {
       this.bmiMp = JSON.parse(localStorage.getItem("history-bb"));
       gr = this.bmiMp;
     }
-    if (localStorage.hasilBmi && localStorage.bmiTextD) {
+    if (
+      localStorage.hasilBmi &&
+      localStorage.bmiTextD &&
+      localStorage.tinggiBadan
+    ) {
       this.hasilBmi = localStorage.hasilBmi;
       this.bmiTextD = localStorage.bmiTextD;
     }
@@ -163,7 +169,8 @@ export default {
             label: "# of Votes",
             data: [],
             borderWidth: 1,
-            backgroundColor: "",
+            backgroundColor: "rgba(250,184,62,56%)",
+            borderColor: "#fab83e",
           },
         ],
       },
