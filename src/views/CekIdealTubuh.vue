@@ -131,10 +131,10 @@ export default {
 
       const parsedBbHistory = JSON.stringify(this.bmiHistory);
       const parsedBmiPr = JSON.stringify(this.beratBadan);
-      // const parsedBmiTb = JSON.stringify(this.tinggiBadan);
+      const parsedBmiTb = JSON.stringify(this.tinggiBadan);
       localStorage.setItem("history-bb", parsedBbHistory);
       localStorage.setItem("Bb-profil", parsedBmiPr);
-      // localStorage.setItem("Tb-profil", parsedBmiTb);
+      localStorage.setItem("Tb-profil", parsedBmiTb);
     },
   },
   mounted() {
