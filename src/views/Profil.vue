@@ -148,18 +148,18 @@ export default {
       localStorage.getItem("hasilBmi") ||
       localStorage.getItem("bmr") ||
       localStorage.getItem("Bb-profil") ||
-      localStorage.getItem("tinggiBadan")
+      localStorage.getItem("Tb-profil")
     ) {
       try {
         this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
         this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
         this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
-        this.tbProfil = JSON.parse(localStorage.getItem("tinggiBadan"));
+        this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
       } catch (e) {
         localStorage.removeItem("hasilBmi");
         localStorage.removeItem("bmr");
         localStorage.removeItem("Bb-profil");
-        localStorage.removeItem("tinggiBadan");
+        localStorage.removeItem("Tb-profil");
       }
     }
   },
