@@ -143,11 +143,7 @@ export default {
       this.bmiMp = JSON.parse(localStorage.getItem("history-bb"));
       gr = this.bmiMp;
     }
-    if (
-      localStorage.hasilBmi &&
-      localStorage.bmiTextD &&
-      localStorage.tinggiBadan
-    ) {
+    if (localStorage.hasilBmi && localStorage.bmiTextD) {
       this.hasilBmi = localStorage.hasilBmi;
       this.bmiTextD = localStorage.bmiTextD;
     }
