@@ -58,14 +58,6 @@ export default {
     }
     popUpCek();
     this.NotifyCek;
-    if (localStorage.status) {
-      this.status = localStorage.status;
-    }
-  },
-  watch: {
-    status(newStatus) {
-      localStorage.status = newStatus;
-    },
   },
   methods: {
     cekHu() {

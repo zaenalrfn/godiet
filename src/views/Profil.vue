@@ -144,24 +144,24 @@ export default {
   },
   mounted() {
     // console.log(this.stProfil);
-    if (
-      localStorage.getItem("hasilBmi") ||
-      localStorage.getItem("bmr") ||
-      localStorage.getItem("Bb-profil") ||
-      localStorage.getItem("Tb-profil")
-    ) {
-      try {
-        this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
-        this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
-        this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
-        this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
-      } catch (e) {
-        localStorage.removeItem("hasilBmi");
-        localStorage.removeItem("bmr");
-        localStorage.removeItem("Bb-profil");
-        localStorage.removeItem("Tb-profil");
-      }
-    }
+    // if (
+    //   localStorage.getItem("hasilBmi") ||
+    //   localStorage.getItem("bmr") ||
+    //   localStorage.getItem("Bb-profil") ||
+    //   localStorage.getItem("Tb-profil")
+    // ) {
+    //   try {
+    //     this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
+    //     this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
+    //     this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
+    //     this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
+    //   } catch (e) {
+    //     localStorage.removeItem("hasilBmi");
+    //     localStorage.removeItem("bmr");
+    //     localStorage.removeItem("Bb-profil");
+    //     localStorage.removeItem("Tb-profil");
+    //   }
+    // }
   },
 };
 </script>
