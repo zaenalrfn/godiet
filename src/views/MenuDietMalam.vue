@@ -49,6 +49,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pt-4 pb-3 border-top">
         <div
           class="cardMenu"
           v-for="makanan_2 in menuDietMalam_2"
@@ -80,6 +82,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pt-4 pb-3 border-top">
         <div
           class="cardMenu"
           v-for="makanan_3 in menuDietMalam_3"
@@ -111,6 +115,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pt-4 pb-3 border-top">
         <div
           class="cardMenu"
           v-for="makanan_4 in menuDietMalam_4"
@@ -142,6 +148,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pt-4 pb-3 border-top">
         <div
           class="cardMenu"
           v-for="makanan_5 in menuDietMalam_5"

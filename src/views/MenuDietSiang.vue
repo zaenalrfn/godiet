@@ -49,16 +49,18 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
         <div
           class="cardMenu"
           v-for="makanan_2 in menuDietSiang_2"
-          v-bind:key="makanan_2.food.foodId"
+          v-bind:key="makanan_2.idMeal"
         >
           <div class="d-flex justify-content-center">
-            <img :src="makanan_2.food.image" />
+            <img :src="makanan_2.strMealThumb" />
           </div>
           <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_2.food.label }}</h4>
+            <h4 class="mt-2">{{ makanan_2.strMeal }}</h4>
             <p>Informasi Nutrisi</p>
           </div>
           <div class="row justify-content-center text-center" id="info">
@@ -80,6 +82,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
         <div
           class="cardMenu"
           v-for="makanan_3 in menuDietSiang_3"
@@ -111,6 +115,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
         <div
           class="cardMenu"
           v-for="makanan_4 in menuDietSiang_4"
@@ -187,16 +193,11 @@ export default {
     let self = this;
     const menuSiang_1 = {
       method: "GET",
-      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=egg",
+      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=rice",
     };
     const menuSiang_2 = {
       method: "GET",
-      url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
-      params: { ingr: " cereals" },
-      headers: {
-        "X-RapidAPI-Key": "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
-        "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
-      },
+      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=salad",
     };
     const menuSiang_3 = {
       method: "GET",
@@ -214,8 +215,8 @@ export default {
     axios
       .request(menuSiang_1)
       .then(function (response) {
-        self.menuDietSiang_1 = response.data.meals;
-        self.menuDietSiang_1.splice(1, 4);
+        const menu = response.data.meals;
+        self.menuDietSiang_1 = menu.filter((item, index) => index == 0);
       })
       .catch(function (error) {
         console.error(error);
@@ -223,8 +224,8 @@ export default {
     axios
       .request(menuSiang_2)
       .then(function (response) {
-        self.menuDietSiang_2 = response.data.hints;
-        self.menuDietSiang_2.splice(1, 21);
+        const menu = response.data.meals;
+        self.menuDietSiang_2 = menu.filter((item, index) => index == 0);
       })
       .catch(function (error) {
         console.error(error);

@@ -50,6 +50,15 @@
           </div>
         </div>
       </div>
+      <div
+        class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top"
+      ></div>
+      <div
+        class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top"
+      ></div>
+      <div
+        class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top"
+      ></div>
     </div>
   </div>
 </template>
