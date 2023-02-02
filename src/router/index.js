@@ -46,10 +46,10 @@ const router = createRouter({
       component: AktivitasKalori,
     },
     {
-      path: "/aktivitasGerak/:id", // /:id
+      path: "/aktivitasGerak", // /:id
       name: "aktivitasGerak",
       component: AktivitasGerak,
-      props: true,
+      // props: true,
     },
     {
       path: "/menuDiet",
