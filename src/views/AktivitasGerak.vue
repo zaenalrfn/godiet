@@ -89,23 +89,23 @@ export default {
     this.Counter;
     let self = this;
     let parameterId = this.$route.params.id;
-    // const options = {
-    //   method: "GET",
-    //   url: `https://zylalabs.com/api/392/exercise+database+api/1004/exercise+by+id?id=${[
-    //     parameterId,
-    //   ]}`,
-    //   headers: {
-    //     Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
-    //   },
-    // };
+    const options = {
+      method: "GET",
+      url: `https://zylalabs.com/api/392/exercise+database+api/1004/exercise+by+id?id=${[
+        parameterId,
+      ]}`,
+      headers: {
+        Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
+      },
+    };
 
-    // axios(options)
-    //   .then(function (response) {
-    //     self.aktivitasId = response.data;
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
+    axios(options)
+      .then(function (response) {
+        self.aktivitasId = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
 
     if (localStorage.getItem("Bb-profil")) {
       this.bbGerak = JSON.parse(localStorage.getItem("Bb-profil"));

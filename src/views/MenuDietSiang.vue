@@ -87,13 +87,13 @@
         <div
           class="cardMenu"
           v-for="makanan_3 in menuDietSiang_3"
-          v-bind:key="makanan_3.idMeal"
+          v-bind:key="makanan_3.food.foodId"
         >
           <div class="d-flex justify-content-center">
-            <img :src="makanan_3.strMealThumb" />
+            <img :src="makanan_3.food.image" />
           </div>
           <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_3.strMeal }}</h4>
+            <h4 class="mt-2">{{ makanan_3.food.label }}</h4>
             <p>Informasi Nutrisi</p>
           </div>
           <div class="row justify-content-center text-center" id="info">
@@ -201,7 +201,12 @@ export default {
     };
     const menuSiang_3 = {
       method: "GET",
-      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=banana",
+      url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
+      params: { ingr: " fruit sandwiches" },
+      headers: {
+        "X-RapidAPI-Key": "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
+        "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
+      },
     };
     const menuSiang_4 = {
       method: "GET",
@@ -233,7 +238,8 @@ export default {
     axios
       .request(menuSiang_3)
       .then(function (response) {
-        self.menuDietSiang_3 = response.data.meals;
+        const menu = response.data.hints;
+        self.menuDietSiang_3 = menu.filter((item, index) => index == 4);
       })
       .catch(function (error) {
         console.error(error);

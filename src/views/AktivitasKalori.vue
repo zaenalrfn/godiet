@@ -38,25 +38,25 @@
             </div>
           </div>
         </div> -->
-        <div class="col-md-4">
-          <div class="card-aktivitas d-flex align-items-center mb-4" id="satu">
-            <div class="card-body text-center">
-              <RouterLink to="/aktivitasGerak">
-                <h4 class="text-white">latihan rumahan</h4>
-              </RouterLink>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-aktivitas d-flex align-items-center mb-4" id="satu">
-            <div class="card-body text-center">
-              <RouterLink to="/aktivitasGerak">
-                <h4 class="text-white">latihan rumahan</h4>
-              </RouterLink>
-            </div>
-          </div>
-        </div>
         <!-- <div class="col-md-4">
+          <div class="card-aktivitas d-flex align-items-center mb-4" id="satu">
+            <div class="card-body text-center">
+              <RouterLink to="/aktivitasGerak">
+                <h4 class="text-white">latihan rumahan</h4>
+              </RouterLink>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-aktivitas d-flex align-items-center mb-4" id="satu">
+            <div class="card-body text-center">
+              <RouterLink to="/aktivitasGerak">
+                <h4 class="text-white">latihan rumahan</h4>
+              </RouterLink>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-md-4">
           <div
             v-for="aktivi in aktivitas"
             v-bind:key="aktivi.id"
@@ -69,7 +69,7 @@
               </RouterLink>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
     <!-- <div class="row">
@@ -111,25 +111,25 @@ export default {
     };
   },
   mounted() {
-    // let self = this;
-    // const options = {
-    //   method: "GET",
-    //   url: `https://zylalabs.com/api/392/exercise+database+api/310/list+exercise+by+body+part?bodypart=cardio`,
-    //   headers: {
-    //     Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
-    //   },
-    // };
-    // axios(options)
-    //   .then(function (response) {
-    //     if (response.data.length > 14) {
-    //       response.data.pop();
-    //       self.aktivitas = response.data;
-    //       console.log(self.aktivitas);
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
+    let self = this;
+    const options = {
+      method: "GET",
+      url: `https://zylalabs.com/api/392/exercise+database+api/310/list+exercise+by+body+part?bodypart=cardio`,
+      headers: {
+        Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
+      },
+    };
+    axios(options)
+      .then(function (response) {
+        if (response.data.length > 14) {
+          response.data.pop();
+          self.aktivitas = response.data;
+          console.log(self.aktivitas);
+        }
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   },
 };
 </script>
