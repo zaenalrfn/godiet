@@ -9,7 +9,12 @@
           <div class="profilUser">
             <RouterLink to="/profil">
               <a href="#">
-                <img src="/img/profilUser.png" height="56" width="56" />
+                <img
+                  :src="gambarProfil"
+                  height="56"
+                  width="56"
+                  class="rounded-circle"
+                />
               </a>
             </RouterLink>
           </div>
@@ -99,6 +104,20 @@ export default {
   name: "HalamanUtama",
   components: {
     popUpHU,
+  },
+  data() {
+    return {
+      gambarProfil: null,
+    };
+  },
+  mounted() {
+    if (localStorage.getItem("url-gambar")) {
+      try {
+        this.gambarProfil = localStorage.getItem("url-gambar");
+      } catch (e) {
+        localStorage.removeItem("url-gambar");
+      }
+    }
   },
 };
 </script>

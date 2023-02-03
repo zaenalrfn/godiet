@@ -21,14 +21,15 @@
         <div class="img-profil text-center">
           <div class="img-p">
             <img
-              src="/img/profilUser.png"
+              :src="gambarProfil"
               alt="img profil"
               width="158"
               height="158"
+              class="rounded-circle"
             />
           </div>
-          <h3 class="title-profil">Bella Amanda</h3>
-          <h5 class="status-user">{{ stProfil }}</h5>
+          <h3 class="title-profil">{{ namaProfil }}</h3>
+          <h5 class="status-user">{{ statusUP }}</h5>
         </div>
       </div>
     </div>
@@ -132,6 +133,7 @@
 </template>
 
 <script>
+import namaUpdate from "../views/EditProfil.vue";
 export default {
   data() {
     return {
@@ -139,7 +141,9 @@ export default {
       bmrProfil: null,
       bbProfil: null,
       tbProfil: null,
-      stProfil: "",
+      namaProfil: null,
+      statusUP: null,
+      gambarProfil: null,
     };
   },
   mounted() {
@@ -148,18 +152,26 @@ export default {
       localStorage.getItem("hasilBmi") ||
       localStorage.getItem("bmr") ||
       localStorage.getItem("Bb-profil") ||
-      localStorage.getItem("Tb-profil")
+      localStorage.getItem("Tb-profil") ||
+      localStorage.getItem("nama-update") ||
+      localStorage.getItem("url-gambar")
     ) {
       try {
         this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
         this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
         this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
         this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
+        this.namaProfil = localStorage.getItem("nama-update");
+        this.statusUP = localStorage.getItem("status-update");
+        this.gambarProfil = localStorage.getItem("url-gambar");
       } catch (e) {
         localStorage.removeItem("hasilBmi");
         localStorage.removeItem("bmr");
         localStorage.removeItem("Bb-profil");
         localStorage.removeItem("Tb-profil");
+        localStorage.removeItem("nama-update");
+        localStorage.removeItem("status-update");
+        localStorage.removeItem("url-gambar");
       }
     }
   },

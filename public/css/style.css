@@ -87,17 +87,11 @@ bagian fitur menu
   width: 80%;
   font-size: 10px;
   font-weight: 500;
-  color: #006f97;
+  color: var(--colorInput);
+  opacity: 60%;
+  letter-spacing: 0.3px;
 }
-#fiturMenu .card .text-2 {
-  color: #9f112b;
-}
-#fiturMenu .card .text-3 {
-  color: #707406;
-}
-#fiturMenu .card .text-4 {
-  color: #096b1c;
-}
+
 #idealTubuh {
   background-image: linear-gradient(
     to left top,
@@ -370,6 +364,10 @@ BAGIAN EDIT PROFIL
 .form input:focus {
   outline: none;
 }
+.form .input-alert {
+  border-bottom: 1px solid var(--colorMerah);
+  background-color: var(--colorAlert);
+}
 .form h5 {
   font-size: 18px;
   color: var(--colorTitle);
@@ -430,6 +428,21 @@ BAGIAN EDIT PROFIL
 }
 .popup-btn a:nth-child(2) {
   background-color: var(--colorMerah);
+}
+.file {
+  position: relative;
+  overflow: hidden;
+  color: var(--colorBiru);
+}
+.file input {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+#edit-profil .img-edit-profil {
+  position: relative;
 }
 
 /* 

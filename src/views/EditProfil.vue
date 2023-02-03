@@ -7,32 +7,28 @@
             <a href="#">Batal</a>
           </RouterLink>
           <h2>Edit Profil</h2>
-          <RouterLink to="/profil">
-            <a href="#">selesai</a>
-          </RouterLink>
+          <a href="#" @click="Selesai">selesai</a>
         </div>
         <div class="img-edit-profil text-center">
           <img
-            src="/img/profilUser.png"
+            :src="fileGambar"
             alt="profil"
             width="125"
             height="125"
+            class="rounded-circle"
           />
-          <h3>
-            <a href="#">Ganti Foto Profil</a>
-          </h3>
+          <div class="file">
+            Ganti Foto Profil
+            <input type="file" name="file" @change="uploadGambar" />
+          </div>
         </div>
       </div>
       <div class="col">
         <form action="" class="form">
           <h5>Nama</h5>
-          <input type="text" />
+          <input type="text" v-model="namaUpdate" class="input-edit-nama" />
           <h5>Status</h5>
-          <input type="text" />
-          <h5>Berat Badan</h5>
-          <input type="text" />
-          <h5>Tinggi Badan</h5>
-          <input type="text" />
+          <input type="text" v-model="statusUpdate" class="input-edit-status" />
         </form>
       </div>
       <div class="logout d-flex gap-2">
@@ -44,3 +40,43 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      namaUpdate: "",
+      statusUpdate: "",
+      fileGambar: null,
+    };
+  },
+  methods: {
+    Selesai() {
+      let inputEditNama = document.querySelector(".input-edit-nama"),
+        inputEditStatus = document.querySelector(".input-edit-status");
+      if (this.namaUpdate === "" || this.statusUpdate === "") {
+        // alert("isi dulu");
+        inputEditNama.classList.add("input-alert");
+        inputEditStatus.classList.add("input-alert");
+      } else {
+        inputEditNama.classList.remove("input-alert");
+        inputEditStatus.classList.remove("input-alert");
+        localStorage.setItem("nama-update", this.namaUpdate);
+        localStorage.setItem("status-update", this.statusUpdate);
+        this.$router.push({ name: "profil" });
+      }
+    },
+    uploadGambar(e) {
+      var gambar = e.target;
+      if (gambar.files && gambar.files[0]) {
+        var reader = new FileReader();
+        reader.onload = (e) => {
+          this.fileGambar = e.target.result;
+          localStorage.setItem("url-gambar", this.fileGambar);
+        };
+        reader.readAsDataURL(gambar.files[0]);
+      }
+    },
+  },
+};
+</script>
