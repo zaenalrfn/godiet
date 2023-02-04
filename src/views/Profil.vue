@@ -59,7 +59,7 @@
           <p class="minggu">24 okt - 29 okt</p>
         </div>
       </div>
-      <div class="col-md border-bottom">
+      <div class="col-md border-bottom" v-for="latihan in riwayatLatihan">
         <div class="img-riwayat d-flex gap-3 align-items-center">
           <img
             src="/img/img-riwayat.png"
@@ -68,61 +68,15 @@
             height="38"
           />
           <div class="title-riwayat-akti">
-            <h3>Lompat Tali</h3>
+            <h3>{{ latihan.nama }}</h3>
             <div class="riwayat-waktu-kkal d-flex gap-4">
               <div class="d-flex gap-2">
                 <h4 class="text-primary"><i class="bi bi-stopwatch"></i></h4>
-                <p>10.00</p>
+                <p>{{ latihan.durasi }} menit</p>
               </div>
               <div class="d-flex gap-2">
                 <h4 class="text-danger"><i class="bi bi-fire"></i></h4>
-                <p>6 Kkal</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md border-bottom">
-        <div class="img-riwayat d-flex gap-3 align-items-center">
-          <img
-            src="/img/img-riwayat.png"
-            alt="img-riwayat"
-            width="36"
-            height="38"
-          />
-          <div class="title-riwayat-akti">
-            <h3>High Kness</h3>
-            <div class="riwayat-waktu-kkal d-flex gap-4">
-              <div class="d-flex gap-2">
-                <h4 class="text-primary"><i class="bi bi-stopwatch"></i></h4>
-                <p>10.00</p>
-              </div>
-              <div class="d-flex gap-2">
-                <h4 class="text-danger"><i class="bi bi-fire"></i></h4>
-                <p>6 Kkal</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md border-bottom">
-        <div class="img-riwayat d-flex gap-3">
-          <img
-            src="/img/img-riwayat.png"
-            alt="img-riwayat"
-            width="36"
-            height="38"
-          />
-          <div class="title-riwayat-akti">
-            <h3>Butt Kicks</h3>
-            <div class="riwayat-waktu-kkal d-flex gap-4">
-              <div class="d-flex gap-2">
-                <h4 class="text-primary"><i class="bi bi-stopwatch"></i></h4>
-                <p>10.00</p>
-              </div>
-              <div class="d-flex gap-2">
-                <h4 class="text-danger"><i class="bi bi-fire"></i></h4>
-                <p>6 Kkal</p>
+                <p>{{ latihan.kalori }} Kkal</p>
               </div>
             </div>
           </div>
@@ -144,17 +98,18 @@ export default {
       namaProfil: null,
       statusUP: null,
       gambarProfil: null,
+      riwayatLatihan: [],
     };
   },
   mounted() {
-    // console.log(this.stProfil);
     if (
       localStorage.getItem("hasilBmi") ||
       localStorage.getItem("bmr") ||
       localStorage.getItem("Bb-profil") ||
       localStorage.getItem("Tb-profil") ||
       localStorage.getItem("nama-update") ||
-      localStorage.getItem("url-gambar")
+      localStorage.getItem("url-gambar") ||
+      localStorage.getItem("riwayat-latihan")
     ) {
       try {
         this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
@@ -164,6 +119,9 @@ export default {
         this.namaProfil = localStorage.getItem("nama-update");
         this.statusUP = localStorage.getItem("status-update");
         this.gambarProfil = localStorage.getItem("url-gambar");
+        this.riwayatLatihan = JSON.parse(
+          localStorage.getItem("riwayat-latihan")
+        );
       } catch (e) {
         localStorage.removeItem("hasilBmi");
         localStorage.removeItem("bmr");
@@ -172,6 +130,7 @@ export default {
         localStorage.removeItem("nama-update");
         localStorage.removeItem("status-update");
         localStorage.removeItem("url-gambar");
+        localStorage.removeItem("riwayat-latihan");
       }
     }
   },

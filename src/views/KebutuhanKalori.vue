@@ -97,6 +97,8 @@ export default {
         InputBb.classList.add("input-alert");
         InputTb.classList.add("input-alert");
         InputU.classList.add("input-alert");
+      } else if (this.bB_bmr <= 0 || this.tB_bmr <= 0 || this.u_bmr <= 0) {
+        alert("Inputs can not be negative");
       } else {
         hasilBmr = 655 + beratBadanBmr + tinggiBadanBmr - umurBmr;
         this.bmr = Math.round(hasilBmr * 100) / 100.0;

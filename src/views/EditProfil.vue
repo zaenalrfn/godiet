@@ -55,7 +55,6 @@ export default {
       let inputEditNama = document.querySelector(".input-edit-nama"),
         inputEditStatus = document.querySelector(".input-edit-status");
       if (this.namaUpdate === "" || this.statusUpdate === "") {
-        // alert("isi dulu");
         inputEditNama.classList.add("input-alert");
         inputEditStatus.classList.add("input-alert");
       } else {

@@ -72,33 +72,6 @@
         </div> -->
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-md">
-        <div class="aktivitasHitung">
-          <p>Berat Badan</p>
-          <form class="row g-4 d-flex justify-content-center">
-            <div class="col-4">
-              <input
-                type="number"
-                class="form-control"
-                id="inputPassword2"
-                placeholder=""
-              />
-            </div>
-            <div class="col-8">
-              <a
-                href="#"
-                class="btn text-white mb-3 w-100"
-                id="hitung"
-                @click="() => TogglePopup('buttonTrigger')"
-              >
-                Hitung
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -124,7 +97,6 @@ export default {
     //     if (response.data.length > 14) {
     //       response.data.pop();
     //       self.aktivitas = response.data;
-    //       console.log(self.aktivitas);
     //     }
     //   })
     //   .catch(function (error) {

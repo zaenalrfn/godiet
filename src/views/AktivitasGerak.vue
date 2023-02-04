@@ -32,6 +32,7 @@
             class="form-control"
             id="inputPassword2"
             v-model="beratBadanAktivitas"
+            required
           />
         </div>
         <div class="col-8">
@@ -39,7 +40,10 @@
             href="#"
             class="btn text-white mb-3 w-100"
             id="hitung"
-            @click="() => TogglePopup('buttonTrigger')"
+            @click="
+              TogglePopup('buttonTrigger');
+              riwayatLatihan(aktivitasId.name, menit, kaloriKeluar);
+            "
           >
             Hitung
           </a>
@@ -68,8 +72,6 @@ export default {
     });
     const TogglePopup = (trigger) => {
       popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-      // <!-- Total Kalori yang Dibakar = Durasi (menit) x [METs x 3,5 x Berat Badan (kg)] / 200 -->
-      this.Hitung;
     };
     return {
       aktivitasId: [],
@@ -82,7 +84,8 @@ export default {
       menit: null,
       detikMenit: null,
       beratBadanAktivitas: null,
-      rimayatLatihan: [],
+      rimayatAktivitas: [],
+      riwayatDurasi: null,
     };
   },
   mounted() {
@@ -123,18 +126,28 @@ export default {
       this.kaloriKeluar = Math.round(
         (this.menit * (3.5 * 3.5 * this.beratBadanAktivitas)) / 200
       );
-      let riwayat = {
-        nama: this.aktivitasId.name,
-      };
       localStorage.setItem("kalori-keluar", this.kaloriKeluar);
       localStorage.setItem("detik", this.detikMenit);
       localStorage.setItem("menit", this.menit);
-      localStorage.setItem("riwayat-latihan", riwayat);
     },
   },
   methods: {
     ResetCounter() {
       clearInterval(this.clear);
+    },
+    riwayatLatihan(namaLatihan, durasiLatihan, kaloriLatihan) {
+      this.Hitung;
+      let latihan = {
+        nama: namaLatihan,
+        durasi: durasiLatihan,
+        kalori: kaloriLatihan,
+      };
+      this.rimayatAktivitas.unshift(latihan);
+      if (this.rimayatAktivitas.length > 6) {
+        this.rimayatAktivitas.pop();
+      }
+      const parsedLatihan = JSON.stringify(this.rimayatAktivitas);
+      localStorage.setItem("riwayat-latihan", parsedLatihan);
     },
   },
 };
