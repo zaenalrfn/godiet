@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="header">
-      <div class="row justify-content-between mt-5 gap-3">
+      <div class="row justify-content-between mt-4 gap-3">
         <div class="col">
           <h1 class="titleHU">Seberapa Sehatkah Hidup Anda?</h1>
         </div>
