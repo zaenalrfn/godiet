@@ -1,13 +1,13 @@
 <template>
   <carousel :items-to-show="1.5">
-    <slide v-for="slide in 10" :key="slide">
+    <slide v-for="slide in 5" :key="slide">
       <div class="carousel-item shadow p-3 mb-5 bg-body-tertiary rounded">
         <div class="slide ps-4 pe-4 bg-white">
           <div class="d-block w-100">
             <div class="header">
               <div class="row justify-content-between mt-4 pt-4">
                 <div class="col-2" id="title">
-                  <img src="asset/img/Vector 2.png" />
+                  <img src="/img/img-riwayat.png" />
                 </div>
                 <div class="col-8" id="title">
                   <h1 class="titleHU text-center">Tips Diet</h1>
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style>
-.carousel__item {
+.carousel-item {
   min-height: 200px;
   width: 100%;
   background-color: var(--vc-clr-primary);
