@@ -25,9 +25,6 @@
                 </div>
               </div>
             </div>
-            <div class="d-block text-center">
-              <img src="asset/img/tips1.png" alt="" width="100%" />
-            </div>
             <div class="mt-4">
               <p class="fw-bolder">1. Konsumsi Sarapan Kaya Protein</p>
               Mengonsumsi makanan kaya protein seperti telur untuk sarapan telah
