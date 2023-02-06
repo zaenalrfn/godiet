@@ -32,15 +32,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>7,6</h3>
+              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -65,15 +65,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_2.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>7,6</h3>
+              <h3>{{ nutrisiMenu[0].menu_2.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_2.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -98,15 +98,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_3.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_3.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_3.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -131,15 +131,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_4.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>7,6</h3>
+              <h3>{{ nutrisiMenu[0].menu_4.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_4.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -164,15 +164,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_5.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>7,6</h3>
+              <h3>{{ nutrisiMenu[0].menu_5.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_5.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -197,15 +197,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>7,6</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{}}</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -230,6 +230,40 @@ export default {
       menuDietPagi_4: [],
       menuDietPagi_5: [],
       menuDietPagi_6: [],
+      nutrisiMenu: [
+        {
+          menu_1: {
+            carbo: "12",
+            calories: "152",
+            protein: "8.14",
+          },
+          menu_2: {
+            carbo: " 78",
+            calories: "1",
+            protein: "6",
+          },
+          menu_3: {
+            carbo: "30",
+            calories: "263",
+            protein: "6",
+          },
+          menu_4: {
+            carbo: "28",
+            calories: "110",
+            protein: "1",
+          },
+          menu_5: {
+            carbo: "26",
+            calories: "112",
+            protein: "2",
+          },
+          menu_6: {
+            carbo: "21",
+            calories: "105",
+            protein: "3.4",
+          },
+        },
+      ],
     };
   },
   mounted() {

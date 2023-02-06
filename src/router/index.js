@@ -11,10 +11,16 @@ import MenuDietPagi from "../views/MenuDietPagi.vue";
 import TipsDiet from "../views/TipsDiet.vue";
 import MenuDietSiang from "../views/MenuDietSiang.vue";
 import MenuDietMalam from "../views/MenuDietMalam.vue";
+import Login from "../views/LoginGodiet.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: "/login",
+      name: "login",
+      component: Login,
+    },
     {
       path: "/",
       name: "home",
@@ -77,6 +83,13 @@ const router = createRouter({
       component: TipsDiet,
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  const isAuth = JSON.parse(localStorage.getItem("auth-login"));
+  if (to.name !== "login" && !isAuth) next({ name: "login" });
+  if (to.name === "login" && isAuth) next({ name: "home" });
+  else next();
 });
 
 export default router;

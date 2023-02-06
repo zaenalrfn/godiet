@@ -100,6 +100,7 @@
 import popUpHU from "../components/popUpHalamanUtama.vue";
 // import popupCek from "../components/popUpHalamanUtama.vue";
 // import cek from "../components/popUpHalamanUtama.vue";
+
 export default {
   name: "HalamanUtama",
   components: {
@@ -108,14 +109,21 @@ export default {
   data() {
     return {
       gambarProfil: null,
+      getProfilEmail: null,
     };
   },
   mounted() {
-    if (localStorage.getItem("url-gambar")) {
+    if (localStorage.getItem("url-gambar") || localStorage.getItem("picture")) {
       try {
-        this.gambarProfil = localStorage.getItem("url-gambar");
+        // this.gambarProfil = localStorage.getItem("url-gambar");
+        this.gambarProfil = localStorage.getItem("picture");
+        if (localStorage.getItem("url-gambar")) {
+          localStorage.removeItem("picture");
+          this.gambarProfil = localStorage.getItem("url-gambar");
+        }
       } catch (e) {
         localStorage.removeItem("url-gambar");
+        localStorage.removeItem("picture");
       }
     }
   },

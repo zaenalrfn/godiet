@@ -73,7 +73,7 @@
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <h3>{{ nutrisiMenu[0].menu_2.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -197,15 +197,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.calories }}</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.carbo }}</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.protein }}</h3>
+              <h3>{{ nutrisiMenu[0].menu_6.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -233,24 +233,34 @@ export default {
       nutrisiMenu: [
         {
           menu_1: {
-            carbo: "9.4",
-            calories: "65",
-            protein: "2.8",
+            carbo: "58",
+            calories: "259",
+            protein: "5",
           },
           menu_2: {
-            carbo: "21",
-            calories: "105",
-            protein: "3.4",
+            carbo: "4",
+            calories: "260.7",
+            protein: "22.8",
           },
           menu_3: {
-            carbo: "10",
-            calories: "78",
-            protein: "1.7",
+            carbo: "35",
+            calories: "130",
+            protein: "1",
           },
           menu_4: {
+            carbo: "43",
+            calories: "313.5",
+            protein: "14.3",
+          },
+          menu_5: {
             carbo: "12",
-            calories: "122",
-            protein: "8.1",
+            calories: "303",
+            protein: "30",
+          },
+          menu_6: {
+            carbo: "25",
+            calories: "95",
+            protein: "1",
           },
         },
       ],

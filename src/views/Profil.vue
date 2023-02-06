@@ -87,7 +87,6 @@
 </template>
 
 <script>
-import namaUpdate from "../views/EditProfil.vue";
 export default {
   data() {
     return {
@@ -109,19 +108,30 @@ export default {
       localStorage.getItem("Tb-profil") ||
       localStorage.getItem("nama-update") ||
       localStorage.getItem("url-gambar") ||
-      localStorage.getItem("riwayat-latihan")
+      localStorage.getItem("riwayat-latihan") ||
+      localStorage.getItem("picture") ||
+      localStorage.getItem("name")
     ) {
       try {
         this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
         this.bmrProfil = JSON.parse(localStorage.getItem("bmr"));
         this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
         this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
-        this.namaProfil = localStorage.getItem("nama-update");
+        this.namaProfil = localStorage.getItem("name");
         this.statusUP = localStorage.getItem("status-update");
-        this.gambarProfil = localStorage.getItem("url-gambar");
+        this.gambarProfil = localStorage.getItem("picture");
         this.riwayatLatihan = JSON.parse(
           localStorage.getItem("riwayat-latihan")
         );
+        if (
+          localStorage.getItem("url-gambar") ||
+          localStorage.getItem("nama-update")
+        ) {
+          localStorage.removeItem("picture");
+          localStorage.removeItem("name");
+          this.gambarProfil = localStorage.getItem("url-gambar");
+          this.namaProfil = localStorage.getItem("nama-update");
+        }
       } catch (e) {
         localStorage.removeItem("hasilBmi");
         localStorage.removeItem("bmr");
@@ -131,6 +141,8 @@ export default {
         localStorage.removeItem("status-update");
         localStorage.removeItem("url-gambar");
         localStorage.removeItem("riwayat-latihan");
+        localStorage.removeItem("picture");
+        localStorage.removeItem("name");
       }
     }
   },

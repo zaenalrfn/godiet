@@ -34,7 +34,9 @@
       <div class="logout d-flex gap-2">
         <h4><i class="bi bi-box-arrow-right"></i></h4>
         <p id="popup-logout" onclick="Logout(true)">
-          <a href="#">Log Out</a>
+          <a href="#">
+            <googleLogout />
+          </a>
         </p>
       </div>
     </div>
@@ -42,7 +44,11 @@
 </template>
 
 <script>
+import { googleLogout } from "vue3-google-login";
 export default {
+  components: {
+    googleLogout,
+  },
   data() {
     return {
       namaUpdate: "",
