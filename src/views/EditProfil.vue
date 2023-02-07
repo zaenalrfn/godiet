@@ -35,7 +35,7 @@
         <h4><i class="bi bi-box-arrow-right"></i></h4>
         <p id="popup-logout" onclick="Logout(true)">
           <a href="#">
-            <googleLogout />
+            <div @click="logout()" class="btn btn-danger">Abmelden</div>
           </a>
         </p>
       </div>
@@ -81,6 +81,9 @@ export default {
         };
         reader.readAsDataURL(gambar.files[0]);
       }
+    },
+    logout(response) {
+      this.$store.dispatch("logout");
     },
   },
 };

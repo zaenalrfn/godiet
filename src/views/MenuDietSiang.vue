@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3">
+      <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
         <div
           class="cardMenu"
           v-for="alergi2 in menuAlergi_2"
@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3">
+      <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
         <div
           class="cardMenu"
           v-for="alergi_3 in menuAlergi_3"

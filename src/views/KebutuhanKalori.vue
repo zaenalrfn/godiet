@@ -56,12 +56,30 @@
           <div class="bmr-ideal text-start">
             <h4>
               BMR Anda adalah :
-              <span id="bmi" class="hasil-bmr">{{ bmr }}</span>
+              <number
+                ref="number2"
+                :from="0"
+                :to="bmr"
+                :duration="0.3"
+                :format="theFormat"
+                easing="Power1.easeOut"
+                id="bmi"
+                class="hasil-bmr"
+              />
               kcal
             </h4>
             <h4>
               Anda membutuhkan :
-              <span id="bmr-hari" class="mt-2">{{ bmrPerHari }}</span>
+              <number
+                ref="number2"
+                :from="0"
+                :to="bmrPerHari"
+                :duration="0.3"
+                :format="theFormat"
+                easing="Power1.easeOut"
+                id="bmr-hari"
+                class="hmt-2"
+              />
               kalori/hari
             </h4>
           </div>
@@ -121,6 +139,12 @@ export default {
         InputTb.classList.remove("input-alert");
         InputU.classList.remove("input-alert");
       }
+    },
+    playAnimation() {
+      this.$refs.number2.play();
+    },
+    theFormat(number) {
+      return number.toFixed(1);
     },
   },
   mounted() {

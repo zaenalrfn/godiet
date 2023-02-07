@@ -27,14 +27,30 @@
           <p>cm</p>
         </div>
         <div class="cek text-center">
-          <a href="#" @click.prevent="kalkulatorBmi" class="btn text-white"
+          <a
+            href="#"
+            @click.prevent="
+              kalkulatorBmi();
+              playAnimation();
+            "
+            class="btn text-white"
             >CEK</a
           >
         </div>
         <div class="bmi-ideal mt-5">
           <h4>
-            BMI(kg/m2): <span id="bmi">{{ hasilBmi }}</span>
+            BMI(kg/m2):
+            <number
+              ref="number2"
+              :from="0"
+              :to="hasilBmi"
+              :duration="0.3"
+              :format="theFormat"
+              easing="Power1.easeOut"
+              id="bmi"
+            />
           </h4>
+
           <div class="img-bmi position-relative">
             <div class="indikator-img-bmi position-absolute"></div>
           </div>
@@ -70,6 +86,7 @@
 <script>
 // bagian chart js
 import Chart from "chart.js/auto";
+
 export default {
   data() {
     return {
@@ -81,6 +98,7 @@ export default {
       bmiCek: null,
       bmi: null,
       bmiTextD: "",
+      tweened: 0,
     };
   },
   methods: {
@@ -135,6 +153,12 @@ export default {
       localStorage.setItem("history-bb", parsedBbHistory);
       localStorage.setItem("Bb-profil", parsedBmiPr);
       localStorage.setItem("Tb-profil", parsedBmiTb);
+    },
+    playAnimation() {
+      this.$refs.number2.play();
+    },
+    theFormat(number) {
+      return number.toFixed(2);
     },
   },
   mounted() {
