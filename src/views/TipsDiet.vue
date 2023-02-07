@@ -42,9 +42,9 @@
       </div>
     </slide>
 
-    <template #addons>
+    <!-- <template #addons>
       <navigation />
-    </template>
+    </template> -->
   </carousel>
 </template>
 
