@@ -16,7 +16,111 @@
       </div>
     </div>
 
-    <div class="opsiMenu">
+    <!-- bagianalergi -->
+    <div class="opsiMenu" v-if="menuAlergi">
+      <div class="row justify-content-center gap-4 mb-3 pb-3">
+        <div
+          class="cardMenu"
+          v-for="alergi1 in menuAlergi_1"
+          v-bind:key="alergi1.food.foodId"
+        >
+          <div class="d-flex justify-content-center">
+            <img :src="alergi1.food.image" />
+          </div>
+          <div class="lh-sm" id="text">
+            <h4 class="mt-2">{{ alergi1.food.label }}</h4>
+            <p>Informasi Nutrisi</p>
+          </div>
+          <div class="row justify-content-center text-center" id="info">
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <p>Kalori</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <p>Karbo</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <p>Protein</p>
+            </div>
+            <div class="col-3">
+              <h3>1</h3>
+              <p>Porsi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pb-3">
+        <div
+          class="cardMenu"
+          v-for="alergi2 in menuAlergi_2"
+          v-bind:key="alergi2.food.foodId"
+        >
+          <div class="d-flex justify-content-center">
+            <img :src="alergi2.food.image" />
+          </div>
+          <div class="lh-sm" id="text">
+            <h4 class="mt-2">{{ alergi2.food.label }}</h4>
+            <p>Informasi Nutrisi</p>
+          </div>
+          <div class="row justify-content-center text-center" id="info">
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <p>Kalori</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <p>Karbo</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <p>Protein</p>
+            </div>
+            <div class="col-3">
+              <h3>1</h3>
+              <p>Porsi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center gap-4 mb-3 pb-3">
+        <div
+          class="cardMenu"
+          v-for="alergi_3 in menuAlergi_3"
+          v-bind:key="alergi_3.idDrink"
+        >
+          <div class="d-flex justify-content-center">
+            <img :src="alergi_3.strDrinkThumb" />
+          </div>
+          <div class="lh-sm" id="text">
+            <h4 class="mt-2">{{ alergi_3.strDrink }}</h4>
+            <p>Informasi Nutrisi</p>
+          </div>
+          <div class="row justify-content-center text-center" id="info">
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <p>Kalori</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <p>Karbo</p>
+            </div>
+            <div class="col-3">
+              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <p>Protein</p>
+            </div>
+            <div class="col-3">
+              <h3>1</h3>
+              <p>Porsi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bagian alergi -->
+
+    <div class="opsiMenu" v-else>
       <div class="row justify-content-center gap-4 mb-3 pb-3">
         <div
           class="cardMenu"
@@ -191,6 +295,12 @@ import axios from "axios";
 export default {
   data() {
     return {
+      menuAlergi: localStorage.getItem("menu-alergi"),
+      // bagian menu alergi
+      menuAlergi_1: [],
+      menuAlergi_2: [],
+      menuAlergi_3: [],
+      // bagian menu alergi
       menuDietMalam_1: [],
       menuDietMalam_2: [],
       menuDietMalam_3: [],
@@ -229,81 +339,139 @@ export default {
   },
   mounted() {
     let self = this;
-    const menuMalam_1 = {
-      method: "GET",
-      url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
-      params: { ingr: " boiled eggs" },
-      headers: {
-        "X-RapidAPI-Key": "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
-        "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
-      },
-    };
-    const menuMalam_2 = {
-      method: "GET",
-      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=soup",
-    };
-    const menuMalam_3 = {
-      method: "GET",
-      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=potatoes",
-    };
-    const menuMalam_4 = {
-      method: "GET",
-      url: "https://www.themealdb.com/api/json/v1/1/search.php?s=bean",
-    };
-    const menuMalam_5 = {
-      method: "GET",
-      url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
-      params: { ingr: "papaya salad" },
-      headers: {
-        "X-RapidAPI-Key": "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
-        "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
-      },
-    };
-    axios
-      .request(menuMalam_1)
-      .then(function (response) {
-        const menu = response.data.hints;
-        self.menuDietMalam_1 = menu.filter((item, index) => index < 1);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-    axios
-      .request(menuMalam_2)
-      .then(function (response) {
-        const menu = response.data.meals;
-        self.menuDietMalam_2 = menu.filter((item, index) => index == 11);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-    axios
-      .request(menuMalam_3)
-      .then(function (response) {
-        const menu = response.data.meals;
-        self.menuDietMalam_3 = menu.filter((item, index) => index == 1);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-    axios
-      .request(menuMalam_4)
-      .then(function (response) {
-        const menu = response.data.meals;
-        self.menuDietMalam_4 = menu.filter((item, index) => index == 0);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-    axios
-      .request(menuMalam_5)
-      .then(function (response) {
-        const menu = response.data.hints;
-        self.menuDietMalam_5 = menu.filter((item, index) => index == 0);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    if (this.menuAlergi) {
+      // bagian api alergi
+      const alergi_1 = {
+        method: "GET",
+        url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
+        params: { ingr: "apple" },
+        headers: {
+          "X-RapidAPI-Key":
+            "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
+          "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
+        },
+      };
+      const alergi_2 = {
+        method: "GET",
+        url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
+        params: { ingr: "boiled yams" },
+        headers: {
+          "X-RapidAPI-Key":
+            "023f98117fmsh1c2705b6ac9a25fp11f719jsna2f7cf1eb86c",
+          "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
+        },
+      };
+      const alergi_3 = {
+        method: "GET",
+        url: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=ginger",
+      };
+      axios
+        .request(alergi_1)
+        .then(function (response) {
+          const menu = response.data.hints;
+          self.menuAlergi_1 = menu.filter((item, index) => index == 0);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(alergi_2)
+        .then(function (response) {
+          const menu = response.data.hints;
+          self.menuAlergi_2 = menu.filter((item, index) => index == 2);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(alergi_3)
+        .then(function (response) {
+          const menu = response.data.drinks;
+          self.menuAlergi_3 = menu.filter((item, index) => index == 0);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      // bagian api alergi
+    } else {
+      const menuMalam_1 = {
+        method: "GET",
+        url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
+        params: { ingr: " boiled eggs" },
+        headers: {
+          "X-RapidAPI-Key":
+            "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
+          "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
+        },
+      };
+      const menuMalam_2 = {
+        method: "GET",
+        url: "https://www.themealdb.com/api/json/v1/1/search.php?s=soup",
+      };
+      const menuMalam_3 = {
+        method: "GET",
+        url: "https://www.themealdb.com/api/json/v1/1/search.php?s=potatoes",
+      };
+      const menuMalam_4 = {
+        method: "GET",
+        url: "https://www.themealdb.com/api/json/v1/1/search.php?s=bean",
+      };
+      const menuMalam_5 = {
+        method: "GET",
+        url: "https://edamam-food-and-grocery-database.p.rapidapi.com/parser",
+        params: { ingr: "papaya salad" },
+        headers: {
+          "X-RapidAPI-Key":
+            "3586c6245bmsh597c24e5b8b4725p17fd36jsne5acb64e2ce1",
+          "X-RapidAPI-Host": "edamam-food-and-grocery-database.p.rapidapi.com",
+        },
+      };
+      axios
+        .request(menuMalam_1)
+        .then(function (response) {
+          const menu = response.data.hints;
+          self.menuDietMalam_1 = menu.filter((item, index) => index < 1);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(menuMalam_2)
+        .then(function (response) {
+          const menu = response.data.meals;
+          self.menuDietMalam_2 = menu.filter((item, index) => index == 11);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(menuMalam_3)
+        .then(function (response) {
+          const menu = response.data.meals;
+          self.menuDietMalam_3 = menu.filter((item, index) => index == 1);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(menuMalam_4)
+        .then(function (response) {
+          const menu = response.data.meals;
+          self.menuDietMalam_4 = menu.filter((item, index) => index == 0);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      axios
+        .request(menuMalam_5)
+        .then(function (response) {
+          const menu = response.data.hints;
+          self.menuDietMalam_5 = menu.filter((item, index) => index == 0);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    }
   },
 };
 </script>

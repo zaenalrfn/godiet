@@ -18,6 +18,7 @@
               value="option1"
               width="14"
               height="14"
+              @click="MenuAlergi"
             />
             <label class="form-check-label" for="inlineRadio1">Ya</label>
           </div>
@@ -47,6 +48,7 @@ export default {
   data() {
     return {
       status: "",
+      menuAlergi: null,
     };
   },
   mounted() {
@@ -65,12 +67,17 @@ export default {
       this.NotifyCek;
       window.location.reload();
     },
+    MenuAlergi(alergi) {
+      this.menuAlergi = alergi.target.checked;
+      localStorage.setItem("menu-alergi", this.menuAlergi);
+    },
   },
   computed: {
     NotifyCek() {
       let popupCek = document.querySelector(".popup-cek");
       if (localStorage.getItem("notifyCek")) {
         popupCek.style.display = "none";
+        // popupCek.setAttribute("class", "d-none");
       }
     },
   },
