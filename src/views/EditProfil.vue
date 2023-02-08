@@ -34,9 +34,7 @@
       <div class="logout d-flex gap-2">
         <h4><i class="bi bi-box-arrow-right"></i></h4>
         <p id="popup-logout" onclick="Logout(true)">
-          <a href="#">
-            <div @click="logout()" class="btn btn-danger">Abmelden</div>
-          </a>
+          <a href="#" @click="logout()"> Log Out </a>
         </p>
       </div>
     </div>
@@ -82,8 +80,12 @@ export default {
         reader.readAsDataURL(gambar.files[0]);
       }
     },
-    logout(response) {
-      this.$store.dispatch("logout");
+    logout() {
+      googleLogout();
+      localStorage.removeItem("notifyCek");
+      localStorage.removeItem("menu-alergi");
+      localStorage.setItem("auth-login", false);
+      this.$router.push({ name: "login" });
     },
   },
 };

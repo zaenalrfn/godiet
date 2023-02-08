@@ -17,7 +17,11 @@
       </div>
     </div>
   </div>
-  <GoogleLogin :callback="login" />
+  <div class="row justify-content-center mt-4">
+    <div class="col text-center">
+      <GoogleLogin :callback="login" />
+    </div>
+  </div>
 </template>
 
 <script>

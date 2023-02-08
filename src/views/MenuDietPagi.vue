@@ -378,7 +378,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.menuAlergi);
     let self = this;
 
     if (this.menuAlergi) {

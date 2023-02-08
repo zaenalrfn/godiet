@@ -77,7 +77,6 @@ export default {
       let popupCek = document.querySelector(".popup-cek");
       if (localStorage.getItem("notifyCek")) {
         popupCek.style.display = "none";
-        // popupCek.setAttribute("class", "d-none");
       }
     },
   },
