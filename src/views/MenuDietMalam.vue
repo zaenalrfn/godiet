@@ -23,6 +23,7 @@
           class="cardMenu"
           v-for="alergi1 in menuAlergi_1"
           v-bind:key="alergi1.food.foodId"
+          v-if="menuAlergi_1.length > 0"
         >
           <div class="d-flex justify-content-center">
             <img :src="alergi1.food.image" />
@@ -33,15 +34,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_1.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_1.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_1.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -50,12 +51,16 @@
             </div>
           </div>
         </div>
+        <div v-else>
+          <loader />
+        </div>
       </div>
       <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
         <div
           class="cardMenu"
           v-for="alergi2 in menuAlergi_2"
           v-bind:key="alergi2.food.foodId"
+          v-if="menuAlergi_2.length > 0"
         >
           <div class="d-flex justify-content-center">
             <img :src="alergi2.food.image" />
@@ -66,15 +71,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_2.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_2.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_2.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -83,12 +88,16 @@
             </div>
           </div>
         </div>
+        <div v-else>
+          <loader />
+        </div>
       </div>
       <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
         <div
           class="cardMenu"
           v-for="alergi_3 in menuAlergi_3"
           v-bind:key="alergi_3.idDrink"
+          v-if="menuAlergi_2.length > 0"
         >
           <div class="d-flex justify-content-center">
             <img :src="alergi_3.strDrinkThumb" />
@@ -99,15 +108,15 @@
           </div>
           <div class="row justify-content-center text-center" id="info">
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_3.calories }}</h3>
               <p>Kalori</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_3.carbo }}</h3>
               <p>Karbo</p>
             </div>
             <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+              <h3>{{ nutrisiAlergi[0].menu_3.protein }}</h3>
               <p>Protein</p>
             </div>
             <div class="col-3">
@@ -115,6 +124,9 @@
               <p>Porsi</p>
             </div>
           </div>
+        </div>
+        <div v-else>
+          <loader />
         </div>
       </div>
     </div>
@@ -292,7 +304,11 @@
 
 <script>
 import axios from "axios";
+import loader from "../components/loaderMenu.vue";
 export default {
+  components: {
+    loader,
+  },
   data() {
     return {
       menuAlergi: localStorage.getItem("menu-alergi"),
@@ -332,6 +348,25 @@ export default {
             carbo: "16",
             calories: "62",
             protein: "0.7",
+          },
+        },
+      ],
+      nutrisiAlergi: [
+        {
+          menu_1: {
+            carbo: "25",
+            calories: "95",
+            protein: "1",
+          },
+          menu_2: {
+            carbo: "26",
+            calories: "112",
+            protein: "2",
+          },
+          menu_3: {
+            carbo: "36.8",
+            calories: "151.9",
+            protein: "3.9",
           },
         },
       ],

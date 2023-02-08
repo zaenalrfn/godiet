@@ -63,6 +63,7 @@ export default {
   },
   methods: {
     cekHu() {
+      localStorage.setItem("status", this.status);
       localStorage.setItem("notifyCek", "true");
       this.NotifyCek;
       window.location.reload();

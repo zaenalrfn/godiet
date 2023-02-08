@@ -110,7 +110,8 @@ export default {
       localStorage.getItem("url-gambar") ||
       localStorage.getItem("riwayat-latihan") ||
       localStorage.getItem("picture") ||
-      localStorage.getItem("name")
+      localStorage.getItem("name") ||
+      localStorage.getItem("status")
     ) {
       try {
         this.bmiProfil = JSON.parse(localStorage.getItem("hasilBmi"));
@@ -118,19 +119,22 @@ export default {
         this.bbProfil = JSON.parse(localStorage.getItem("Bb-profil"));
         this.tbProfil = JSON.parse(localStorage.getItem("Tb-profil"));
         this.namaProfil = localStorage.getItem("name");
-        this.statusUP = localStorage.getItem("status-update");
+        this.statusUP = localStorage.getItem("status");
         this.gambarProfil = localStorage.getItem("picture");
         this.riwayatLatihan = JSON.parse(
           localStorage.getItem("riwayat-latihan")
         );
         if (
           localStorage.getItem("url-gambar") ||
-          localStorage.getItem("nama-update")
+          localStorage.getItem("nama-update") ||
+          localStorage.getItem("status-update")
         ) {
           localStorage.removeItem("picture");
           localStorage.removeItem("name");
+          localStorage.removeItem("status");
           this.gambarProfil = localStorage.getItem("url-gambar");
           this.namaProfil = localStorage.getItem("nama-update");
+          this.statusUP = localStorage.getItem("status-update");
         }
       } catch (e) {
         localStorage.removeItem("hasilBmi");

@@ -84,6 +84,7 @@ export default {
       googleLogout();
       localStorage.removeItem("notifyCek");
       localStorage.removeItem("menu-alergi");
+      localStorage.removeItem("status-update");
       localStorage.setItem("auth-login", false);
       this.$router.push({ name: "login" });
     },
