@@ -56,7 +56,6 @@
         <h3 class="icon-history"><i class="bi bi-clock-history"></i></h3>
         <div class="title-r">
           <h2>Riwayat Latihan</h2>
-          <p class="minggu">24 okt - 29 okt</p>
         </div>
       </div>
       <div class="col-md border-bottom" v-for="latihan in riwayatLatihan">
