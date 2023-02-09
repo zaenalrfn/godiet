@@ -57,7 +57,13 @@ export default {
       const provider = new GoogleAuthProvider();
       signInWithPopup(getAuth(), provider)
         .then((result) => {
-          console.log(result.user.providerData);
+          console.log(result.user);
+          this.getProfilImg = result.user.displayName;
+          this.namaP = result.user.photoURL;
+          localStorage.setItem("picture", this.namaP);
+          localStorage.setItem("name", this.getProfilImg);
+          localStorage.setItem("auth-login", true);
+          this.$router.push({ name: "home" });
         })
         .catch((error) => {
           console.log(error);
