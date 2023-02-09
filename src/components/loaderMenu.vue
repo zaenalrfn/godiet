@@ -5,7 +5,7 @@
   background-color: #e4f3f9;
   border-radius: 30px;
   margin: 10px;
-  animation: animaLoader 1s ease-in infinite;
+  animation: animaLoader 600ms ease-in infinite;
 }
 .loader-title {
   width: 100px;
@@ -13,7 +13,7 @@
   background-color: #e4f3f9;
   border-radius: 30px;
   margin: 10px;
-  animation: animaLoader 1s ease-in infinite;
+  animation: animaLoader 600ms ease-in infinite;
   margin-top: 20px;
 }
 .loader-info {
@@ -25,7 +25,7 @@
   background-color: #e4f3f9;
   border-radius: 15px;
   margin: 10px;
-  animation: animaLoader 300ms ease-in infinite;
+  animation: animaLoader 600ms ease-in infinite;
 }
 
 @keyframes animaLoader {

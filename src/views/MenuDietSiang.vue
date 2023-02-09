@@ -133,203 +133,208 @@
     <!-- bagian alergi -->
 
     <div class="opsiMenu" v-else>
-      <div class="row justify-content-center gap-4 mb-3 pb-3">
-        <div
-          class="cardMenu"
-          v-for="makanan in menuDietSiang_1"
-          v-bind:key="makanan.idMeal"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan.strMealThumb" />
+      <div v-if="menuDietSiang_1.length > 0">
+        <div class="row justify-content-center gap-4 mb-3 pb-3">
+          <div
+            class="cardMenu"
+            v-for="makanan in menuDietSiang_1"
+            v-bind:key="makanan.idMeal"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan.strMealThumb" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan.strMeal }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
           </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan.strMeal }}</h4>
-            <p>Informasi Nutrisi</p>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
+          <div
+            class="cardMenu"
+            v-for="makanan_2 in menuDietSiang_2"
+            v-bind:key="makanan_2.idMeal"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan_2.strMealThumb" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan_2.strMeal }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_2.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_2.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_2.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
           </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.calories }}</h3>
-              <p>Kalori</p>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
+          <div
+            class="cardMenu"
+            v-for="makanan_3 in menuDietSiang_3"
+            v-bind:key="makanan_3.food.foodId"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan_3.food.image" />
             </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.carbo }}</h3>
-              <p>Karbo</p>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan_3.food.label }}</h4>
+              <p>Informasi Nutrisi</p>
             </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_1.protein }}</h3>
-              <p>Protein</p>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_3.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_3.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_3.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
             </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
+          </div>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
+          <div
+            class="cardMenu"
+            v-for="makanan_4 in menuDietSiang_4"
+            v-bind:key="makanan_4.idMeal"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan_4.strMealThumb" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan_4.strMeal }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
+          <div
+            class="cardMenu"
+            v-for="makanan_5 in menuDietSiang_5"
+            v-bind:key="makanan_5.idMeal"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan_5.strMealThumb" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan_5.strMeal }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_4.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
+          <div
+            class="cardMenu"
+            v-for="makanan_6 in menuDietSiang_6"
+            v-bind:key="makanan_6.food.foodId"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="makanan_6.food.image" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ makanan_6.food.label }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_6.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_6.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiMenu[0].menu_6.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
-        <div
-          class="cardMenu"
-          v-for="makanan_2 in menuDietSiang_2"
-          v-bind:key="makanan_2.idMeal"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan_2.strMealThumb" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_2.strMeal }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_2.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_2.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_2.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
-        <div
-          class="cardMenu"
-          v-for="makanan_3 in menuDietSiang_3"
-          v-bind:key="makanan_3.food.foodId"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan_3.food.image" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_3.food.label }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_3.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
-        <div
-          class="cardMenu"
-          v-for="makanan_4 in menuDietSiang_4"
-          v-bind:key="makanan_4.idMeal"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan_4.strMealThumb" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_4.strMeal }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
-        <div
-          class="cardMenu"
-          v-for="makanan_5 in menuDietSiang_5"
-          v-bind:key="makanan_5.idMeal"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan_5.strMealThumb" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_5.strMeal }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_4.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 pt-4 border-top">
-        <div
-          class="cardMenu"
-          v-for="makanan_6 in menuDietSiang_6"
-          v-bind:key="makanan_6.food.foodId"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="makanan_6.food.image" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ makanan_6.food.label }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_6.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_6.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiMenu[0].menu_6.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
+      <div v-else>
+        <loader />
       </div>
     </div>
   </div>

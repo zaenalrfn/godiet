@@ -1,3 +1,9 @@
+<style scoped>
+.box-login {
+  width: auto;
+}
+</style>
+
 <template>
   <div class="container">
     <div class="row text-center justify-content-center">
@@ -18,9 +24,16 @@
     </div>
   </div>
   <div class="row justify-content-center mt-4">
-    <div class="col text-center">
+    <div class="col text-center" @click="Login">
       <!-- <GoogleLogin :callback="login" /> -->
-      <button @click.prevent="Login">Login</button>
+      <div
+        class="box-login d-flex align-items-center justify-content-center gap-3 bg-primary me-4 ms-4 rounded"
+      >
+        <div class="box">Lanjutkan Dengan Google</div>
+        <div class="box-img">
+          <img src="/img/login.png" alt="" :width="53.45" :height="54.36" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +42,7 @@
 // import { decodeCredential } from "vue3-google-login";
 // import { GoogleLogin } from "vue3-google-login";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 export default {
   name: "Login",
   // components: {
@@ -53,9 +67,9 @@ export default {
     //   localStorage.setItem("auth-login", true);
     //   this.$router.push({ name: "home" });
     // },
-    Login() {
+    async Login() {
       const provider = new GoogleAuthProvider();
-      signInWithPopup(getAuth(), provider)
+      await signInWithPopup(getAuth(), provider)
         .then((result) => {
           console.log(result.user);
           this.getProfilImg = result.user.displayName;
