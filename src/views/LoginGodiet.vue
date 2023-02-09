@@ -19,19 +19,21 @@
   </div>
   <div class="row justify-content-center mt-4">
     <div class="col text-center">
-      <GoogleLogin :callback="login" />
+      <!-- <GoogleLogin :callback="login" /> -->
+      <button @click.prevent="Login">Login</button>
     </div>
   </div>
 </template>
 
 <script>
-import { decodeCredential } from "vue3-google-login";
-import { GoogleLogin } from "vue3-google-login";
+// import { decodeCredential } from "vue3-google-login";
+// import { GoogleLogin } from "vue3-google-login";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 export default {
   name: "Login",
-  components: {
-    GoogleLogin,
-  },
+  // components: {
+  //   GoogleLogin,
+  // },
   data() {
     return {
       getProfilImg: null,
@@ -39,17 +41,27 @@ export default {
     };
   },
   methods: {
-    login(response) {
-      // decodeCredential will retrive the JWT payload from the credential
-      let res = response;
-      const userData = decodeCredential(res.credential);
-      console.log("Handle the userData", userData);
-      this.getProfilImg = userData.name;
-      this.namaP = userData.picture;
-      localStorage.setItem("picture", this.namaP);
-      localStorage.setItem("name", this.getProfilImg);
-      localStorage.setItem("auth-login", true);
-      this.$router.push({ name: "home" });
+    // login(response) {
+    //   // decodeCredential will retrive the JWT payload from the credential
+    //   let res = response;
+    //   const userData = decodeCredential(res.credential);
+    //   console.log("Handle the userData", userData);
+    //   this.getProfilImg = userData.name;
+    //   this.namaP = userData.picture;
+    //   localStorage.setItem("picture", this.namaP);
+    //   localStorage.setItem("name", this.getProfilImg);
+    //   localStorage.setItem("auth-login", true);
+    //   this.$router.push({ name: "home" });
+    // },
+    Login() {
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(getAuth(), provider)
+        .then((result) => {
+          console.log(result.user.providerData);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
