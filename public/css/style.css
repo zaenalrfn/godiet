@@ -644,6 +644,21 @@ BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
   );
 }
 
+#menu .card img[alt="1"] {
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+#menu .card img[alt="2"] {
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+#menu .card img[alt="3"] {
+  position: relative;
+  top: -18px;
+  left: -5px;
+}
 /* BAGIAN AKTIVITAS KALORI */
 
 #fiturMenu-aktivitas {
@@ -658,10 +673,6 @@ BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
 #fiturMenu-aktivitas .aktivitas .card-body {
   background-color: var(--colorBiru);
 }
-/* #fiturMenu-aktivitas .row {
-  display: grid;
-  grid-template-columns: auto auto;
-} */
 #fiturMenu-aktivitas .row:nth-child(1) {
   margin-bottom: 10rem !important;
 }

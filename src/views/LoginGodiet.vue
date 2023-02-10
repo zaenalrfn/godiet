@@ -77,7 +77,7 @@ export default {
           localStorage.setItem("picture", this.namaP);
           localStorage.setItem("name", this.getProfilImg);
           localStorage.setItem("auth-login", true);
-          this.$router.push({ name: "home" });
+          this.$router.push({ name: "loading" });
         })
         .catch((error) => {
           console.log(error);

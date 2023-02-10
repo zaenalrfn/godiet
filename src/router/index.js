@@ -12,6 +12,7 @@ import TipsDiet from "../views/TipsDiet.vue";
 import MenuDietSiang from "../views/MenuDietSiang.vue";
 import MenuDietMalam from "../views/MenuDietMalam.vue";
 import Login from "../views/LoginGodiet.vue";
+import Loader from "../components/loaderLogin.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,11 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+    },
+    {
+      path: "/loader",
+      name: "loading",
+      component: Loader,
     },
     {
       path: "/profil",
