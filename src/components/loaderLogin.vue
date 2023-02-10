@@ -3,7 +3,7 @@
     <div id="fiturMenu-aktivitas">
       <div class="row justify-content-center gap-3 text-center">
         <div class="col-md-3">
-          <img src="img/healt.gif" alt="" :width="358" />
+          <img src="/img/healt.gif" :width="358" />
         </div>
 
         <div class="col-md-3">
