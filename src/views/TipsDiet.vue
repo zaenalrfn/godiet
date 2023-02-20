@@ -34,8 +34,10 @@
               <div class="d-block text-center">
                 <img :src="slide.img" alt="" :width="254" :height="156.07" />
               </div>
-              <h5 class="fw-bolder mt-5">{{ slide.title }}</h5>
-              <p class="des-tips">{{ slide.des }}</p>
+              <h5 class="fw-bolder mt-5 title-tips text-start">
+                {{ slide.title }}
+              </h5>
+              <p class="des-tips text-start">{{ slide.des }}</p>
             </div>
           </div>
         </div>

@@ -733,8 +733,18 @@ BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
   margin-top: -18px;
 }
 /* tips diet */
+.textHU p {
+  font-size: 14px;
+  color: var(--colorText);
+}
 .des-tips {
   width: auto;
   height: 230px;
   overflow-y: scroll;
+  font-size: 16px;
+  color: var(--colorText);
+}
+.title-tips {
+  font-size: 16px;
+  color: var(--colorText);
 }
