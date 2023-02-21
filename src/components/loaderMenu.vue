@@ -45,6 +45,26 @@
       <div class="loader-box"></div>
     </div>
   </div>
+  <div class="loader">
+    <div class="loader-img"></div>
+    <div class="loader-title"></div>
+    <div class="loader-info">
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+    </div>
+  </div>
+  <div class="loader">
+    <div class="loader-img"></div>
+    <div class="loader-title"></div>
+    <div class="loader-info">
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+      <div class="loader-box"></div>
+    </div>
+  </div>
 </template>
 <script>
 export default {

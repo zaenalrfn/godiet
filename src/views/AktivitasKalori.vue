@@ -89,7 +89,7 @@ export default {
     //   method: "GET",
     //   url: `https://zylalabs.com/api/392/exercise+database+api/310/list+exercise+by+body+part?bodypart=cardio`,
     //   headers: {
-    //     Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
+    //     Authorization: "Bearer 887|pmvFechj1dMyDwdT3pFysJRfjJQ46uNFRNVgqTR2",
     //   },
     // };
     // axios(options)

@@ -98,7 +98,7 @@ export default {
     //     parameterId,
     //   ]}`,
     //   headers: {
-    //     Authorization: "Bearer 639|dwzLZuBqnS0ZgiGLjMBa1VTPpHoFYnVBlgxwpLQa",
+    //     Authorization: "Bearer 887|pmvFechj1dMyDwdT3pFysJRfjJQ46uNFRNVgqTR2",
     //   },
     // };
 
@@ -124,7 +124,7 @@ export default {
     },
     Hitung() {
       this.kaloriKeluar = Math.round(
-        (this.menit * (3.5 * 3.5 * this.beratBadanAktivitas)) / 200
+        (this.menit * (6 * 3.5 * this.beratBadanAktivitas)) / 200
       );
       localStorage.setItem("kalori-keluar", this.kaloriKeluar);
       localStorage.setItem("detik", this.detikMenit);
