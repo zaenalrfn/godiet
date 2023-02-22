@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import LoadScript from "vue-plugin-load-script";
 import VueNumber from "vue-number-animation";
+// import "./registerServiceWorker";
 
 import "./assets/main.css";
 

@@ -2,11 +2,25 @@ import { fileURLToPath, URL } from "node:url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-
+import { VitePWA } from "vite-plugin-pwa";
 // https://vitejs.dev/config/
 
 export default defineConfig({
-  plugins: [vue()],
+  // pwa: {
+  //   name: "PWA Vue tutor",
+  //   themeColor: "#fff",
+  //   msTileColor: "#000",
+  //   workboxPluginMode: "GenerateSW",
+  //   workboxOptions: {
+  //     skipWaiting: true,
+  //   },
+  // },
+  plugins: [
+    vue(),
+    VitePWA({
+      injectRegister: "auto",
+    }),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -16,26 +30,14 @@ export default defineConfig({
     chunkSizeWarningLimit: 1600,
   },
 });
-// export default defineConfig({
-//   base: "/Stakepool-Frontend/",
-//   plugins: [vue()],
-//   resolve: {
-//   alias: {
-//   "~": path.resolve(__dirname, "node_modules"),
-//   "@": path.resolve(__dirname, "src"),
-//   },
-//   },
-//   build: {
-//   chunkSizeWarningLimit: 1600,
-//   },
-//   });
 // module.exports = {
-//   configureWebpack: {
-//     optimization: {
-//       splitChunks: {
-//         minSize: 10000,
-//         maxSize: 250000,
-//       },
+//   pwa: {
+//     name: "PWA Vue tutor",
+//     themeColor: "#fff",
+//     msTileColor: "#000",
+//     workboxPluginMode: "GenerateSW",
+//     workboxOptions: {
+//       skipWaiting: true,
 //     },
 //   },
 // };
