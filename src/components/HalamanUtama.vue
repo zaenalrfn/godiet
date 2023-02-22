@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <v-btn text @click="dismiss">Dismiss</v-btn>
-    <v-btn text @click="install">Install</v-btn>
     <div id="header">
       <div class="row justify-content-between mt-4 gap-3">
         <div class="col">
@@ -113,14 +111,6 @@ export default {
       gambarProfil: null,
       getProfilEmail: null,
     };
-  },
-  methods: {
-    async dismiss() {
-      this.deferredPrompt = null;
-    },
-    async install() {
-      this.deferredPrompt.prompt();
-    },
   },
   mounted() {
     if (localStorage.getItem("url-gambar") || localStorage.getItem("picture")) {

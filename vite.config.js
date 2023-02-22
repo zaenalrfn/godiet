@@ -19,6 +19,10 @@ export default defineConfig({
     vue(),
     VitePWA({
       injectRegister: "auto",
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true,
+      },
     }),
   ],
   resolve: {
