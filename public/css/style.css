@@ -468,6 +468,11 @@ BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
   font-weight: 600;
   margin-top: 12px;
 }
+#kebBmr {
+  font-size: var(--sizeTitle);
+  color: var(--colorTitle);
+  font-weight: 600;
+}
 .title-ideal a {
   color: var(--colorTitle);
 }

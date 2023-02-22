@@ -15,6 +15,7 @@
         </RouterLink>
         <h2 class="text-center">Kebutuhan Kalori</h2>
       </div>
+      <h2 class="text-center" id="kebBmr">(BMR)</h2>
       <div class="col cek-input">
         <h5>Berat Badan</h5>
         <div class="input-ideal d-flex align-items-center gap-2">
