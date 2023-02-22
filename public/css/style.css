@@ -41,6 +41,10 @@ body {
   font-size: var(--sizeTitle);
   color: var(--colorTitle);
 }
+/* BAGIAN LOGIN */
+.des-login {
+  font-size: 12px;
+}
 /*  
 ========================================================
 bagian fitur menu 

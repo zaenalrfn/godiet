@@ -1,6 +1,7 @@
 <style scoped>
 .box-login {
   width: auto;
+  border-radius: 31px;
 }
 </style>
 
@@ -16,22 +17,21 @@
     </div>
     <div class="row mt-3">
       <div class="col text-center">
-        <p>
+        <p class="des-login">
           GoDiet adalah sebuah aplikasi yang memudahkan untuk para wanita
           memulai program diet harian sebagai sarana memulai pola hidup sehat
         </p>
       </div>
     </div>
-  </div>
-  <div class="row justify-content-center mt-4">
-    <div class="col text-center" @click="Login">
-      <!-- <GoogleLogin :callback="login" /> -->
-      <div
-        class="box-login d-flex align-items-center justify-content-center gap-3 bg-primary me-4 ms-4 rounded"
-      >
-        <div class="box">Lanjutkan Dengan Google</div>
-        <div class="box-img">
-          <img src="/img/login.png" alt="" :width="53.45" :height="54.36" />
+    <div class="row mt-3">
+      <div class="col" @click="Login">
+        <div
+          class="box-login d-flex align-items-center justify-content-center gap-4 bg-primary me-4 ms-4"
+        >
+          <div class="box text-white">Lanjutkan Dengan Google</div>
+          <div class="box-img p-1">
+            <img src="/img/login.png" alt="" :width="53.45" :height="54.36" />
+          </div>
         </div>
       </div>
     </div>
