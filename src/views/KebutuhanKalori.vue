@@ -53,7 +53,14 @@
           >
         </div>
         <div class="d-flex justify-content-center align-items-center mt-3 mb-3">
-          <div class="bmr-ideal text-start">
+          <div class="bmr-ideal text-center">
+            <img
+              class="text-center"
+              src="/img/bmr-img.png"
+              alt=""
+              :width="140.47"
+              :height="127.48"
+            />
             <h4>
               BMR Anda adalah :
               <number

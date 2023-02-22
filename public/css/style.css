@@ -527,7 +527,7 @@ BAGIAN CEK IDEAL TUBUH DAN KEBUTUHAN KALORI
 }
 .bmr-ideal {
   width: 290px;
-  padding: 40px 15px;
+  padding: 5px;
   background-color: var(--colorInput);
   border-radius: 15px;
   border: 1px solid var(--colorBiru);
