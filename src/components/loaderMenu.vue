@@ -6,6 +6,7 @@
   border-radius: 30px;
   margin: 10px;
   animation: animaLoader 600ms ease-in infinite;
+  opacity: 50%;
 }
 .loader-title {
   width: 100px;
@@ -15,6 +16,7 @@
   margin: 10px;
   animation: animaLoader 600ms ease-in infinite;
   margin-top: 20px;
+  opacity: 50%;
 }
 .loader-info {
   display: flex;
@@ -26,11 +28,12 @@
   border-radius: 15px;
   margin: 10px;
   animation: animaLoader 600ms ease-in infinite;
+  opacity: 50%;
 }
 
 @keyframes animaLoader {
   100% {
-    transform: scale(1.05);
+    opacity: 100%;
   }
 }
 </style>

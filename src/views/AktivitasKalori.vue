@@ -57,17 +57,22 @@
           </div>
         </div>
         <!-- <div class="col-md-4">
-          <div
-            v-for="aktivi in aktivitas"
-            v-bind:key="aktivi.id"
-            class="card-aktivitas d-flex align-items-center mb-4"
-            id="satu"
-          >
-            <div class="card-body text-center">
-              <RouterLink v-bind:to="/aktivitasGerak/ + aktivi.id">
-                <h4 class="text-white">{{ aktivi.name }}</h4>
-              </RouterLink>
+          <div v-if="aktivitas.length > 0">
+            <div
+              v-for="aktivi in aktivitas"
+              v-bind:key="aktivi.id"
+              class="card-aktivitas d-flex align-items-center mb-4"
+              id="satu"
+            >
+              <div class="card-body text-center">
+                <RouterLink v-bind:to="/aktivitasGerak/ + aktivi.id">
+                  <h4 class="text-white">{{ aktivi.name }}</h4>
+                </RouterLink>
+              </div>
             </div>
+          </div>
+          <div v-else>
+            <loaderAk />
           </div>
         </div> -->
       </div>
@@ -77,7 +82,11 @@
 
 <script>
 import axios from "axios";
+import loaderAk from "../components/loaderAktivitas.vue";
 export default {
+  components: {
+    loaderAk,
+  },
   data() {
     return {
       aktivitas: [],

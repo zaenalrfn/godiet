@@ -7,7 +7,7 @@
             <a href="#">Batal</a>
           </RouterLink>
           <h2>Edit Profil</h2>
-          <a href="#" @click="Selesai">selesai</a>
+          <a href="#" class="text-dark" @click="Selesai">Selesai</a>
         </div>
         <div class="img-edit-profil text-center">
           <img

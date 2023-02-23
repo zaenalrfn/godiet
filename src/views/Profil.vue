@@ -68,7 +68,7 @@
           />
           <div class="title-riwayat-akti">
             <h3>{{ latihan.nama }}</h3>
-            <div class="riwayat-waktu-kkal d-flex gap-4">
+            <div class="riwayat-waktu-kkal d-flex gap-4 mt-3">
               <div class="d-flex gap-2">
                 <h4 class="text-primary"><i class="bi bi-stopwatch"></i></h4>
                 <p>{{ latihan.durasi }} menit</p>
