@@ -18,116 +18,109 @@
 
     <!-- bagianalergi -->
     <div class="opsiMenu" v-if="menuAlergi">
-      <div class="row justify-content-center gap-4 mb-3 pb-3">
-        <div
-          class="cardMenu"
-          v-for="alergi1 in menuAlergi_1"
-          v-bind:key="alergi1.food.foodId"
-          v-if="menuAlergi_1.length > 0"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="alergi1.food.image" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ alergi1.food.label }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_1.calories }}</h3>
-              <p>Kalori</p>
+      <div v-if="menuAlergi_1.length > 0">
+        <div class="row justify-content-center gap-4 mb-3 pb-3">
+          <div
+            class="cardMenu"
+            v-for="alergi1 in menuAlergi_1"
+            v-bind:key="alergi1.food.foodId"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="alergi1.food.image" />
             </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_1.carbo }}</h3>
-              <p>Karbo</p>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ alergi1.food.label }}</h4>
+              <p>Informasi Nutrisi</p>
             </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_1.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_1.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_1.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_1.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
             </div>
           </div>
         </div>
-        <div v-else>
-          <loader />
+        <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
+          <div
+            class="cardMenu"
+            v-for="alergi2 in menuAlergi_2"
+            v-bind:key="alergi2.food.foodId"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="alergi2.food.image" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ alergi2.food.label }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_2.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_2.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_2.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
+          <div
+            class="cardMenu"
+            v-for="alergi_3 in menuAlergi_3"
+            v-bind:key="alergi_3.idDrink"
+          >
+            <div class="d-flex justify-content-center">
+              <img :src="alergi_3.strDrinkThumb" />
+            </div>
+            <div class="lh-sm" id="text">
+              <h4 class="mt-2">{{ alergi_3.strDrink }}</h4>
+              <p>Informasi Nutrisi</p>
+            </div>
+            <div class="row justify-content-center text-center" id="info">
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_3.calories }}</h3>
+                <p>Kalori</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_3.carbo }}</h3>
+                <p>Karbo</p>
+              </div>
+              <div class="col-3">
+                <h3>{{ nutrisiAlergi[0].menu_3.protein }}</h3>
+                <p>Protein</p>
+              </div>
+              <div class="col-3">
+                <h3>1</h3>
+                <p>Porsi</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
-        <div
-          class="cardMenu"
-          v-for="alergi2 in menuAlergi_2"
-          v-bind:key="alergi2.food.foodId"
-          v-if="menuAlergi_2.length > 0"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="alergi2.food.image" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ alergi2.food.label }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_2.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_2.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_2.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-        <div v-else>
-          <loader />
-        </div>
-      </div>
-      <div class="row justify-content-center gap-4 mb-3 pb-3 border-top pt-4">
-        <div
-          class="cardMenu"
-          v-for="alergi_3 in menuAlergi_3"
-          v-bind:key="alergi_3.idDrink"
-          v-if="menuAlergi_2.length > 0"
-        >
-          <div class="d-flex justify-content-center">
-            <img :src="alergi_3.strDrinkThumb" />
-          </div>
-          <div class="lh-sm" id="text">
-            <h4 class="mt-2">{{ alergi_3.strDrink }}</h4>
-            <p>Informasi Nutrisi</p>
-          </div>
-          <div class="row justify-content-center text-center" id="info">
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_3.calories }}</h3>
-              <p>Kalori</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_3.carbo }}</h3>
-              <p>Karbo</p>
-            </div>
-            <div class="col-3">
-              <h3>{{ nutrisiAlergi[0].menu_3.protein }}</h3>
-              <p>Protein</p>
-            </div>
-            <div class="col-3">
-              <h3>1</h3>
-              <p>Porsi</p>
-            </div>
-          </div>
-        </div>
-        <div v-else>
-          <loader />
-        </div>
+      <div v-else>
+        <loader />
       </div>
     </div>
     <!-- bagian alergi -->

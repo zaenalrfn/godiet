@@ -26,7 +26,7 @@
     <div class="row mt-3">
       <div class="col" @click="Login">
         <div
-          class="box-login d-flex align-items-center justify-content-center gap-4 bg-primary me-4 ms-4"
+          class="box-login d-flex align-items-center justify-content-center gap-3 bg-primary me-4 ms-4"
         >
           <div class="box text-white">Lanjutkan Dengan Google</div>
           <div class="box-img p-1">
