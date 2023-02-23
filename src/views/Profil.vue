@@ -77,6 +77,12 @@
                 <h4 class="text-danger"><i class="bi bi-fire"></i></h4>
                 <p>{{ latihan.kalori }} Kkal</p>
               </div>
+              <div class="d-flex gap-2">
+                <h4 class="text-secondary">
+                  <i class="bi bi-calendar-event"></i>
+                </h4>
+                <p>{{ latihan.waktuHari }}</p>
+              </div>
             </div>
           </div>
         </div>

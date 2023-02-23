@@ -130,17 +130,41 @@ export default {
       localStorage.setItem("detik", this.detikMenit);
       localStorage.setItem("menit", this.menit);
     },
+    generateDay() {
+      const nameMonth = [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12",
+      ];
+      const d = new Date();
+      let date = d.getDate();
+      date = date < 10 ? "0" + date : date;
+      const result =
+        nameMonth[d.getMonth()] + "/" + date + "/" + d.getFullYear();
+      return result;
+    },
   },
   methods: {
     ResetCounter() {
       clearInterval(this.clear);
     },
     riwayatLatihan(namaLatihan, durasiLatihan, kaloriLatihan) {
+      let hari = this.generateDay;
       this.Hitung;
       let latihan = {
         nama: namaLatihan,
         durasi: durasiLatihan,
         kalori: kaloriLatihan,
+        waktuHari: hari,
       };
       this.rimayatAktivitas.unshift(latihan);
       if (this.rimayatAktivitas.length > 6) {
