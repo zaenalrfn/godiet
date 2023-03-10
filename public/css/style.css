@@ -361,6 +361,13 @@ BAGIAN EDIT PROFIL
 .img-edit-profil img {
   margin-bottom: 21px;
 }
+.input-status #form-aktivitas {
+  border: none;
+  border-bottom: 1px solid #999999;
+}
+.input-status #form-aktivitas:focus {
+  box-shadow: none;
+}
 .form input {
   width: 100%;
   border: none;

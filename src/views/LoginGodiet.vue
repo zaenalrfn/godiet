@@ -55,23 +55,11 @@ export default {
     };
   },
   methods: {
-    // login(response) {
-    //   // decodeCredential will retrive the JWT payload from the credential
-    //   let res = response;
-    //   const userData = decodeCredential(res.credential);
-    //   console.log("Handle the userData", userData);
-    //   this.getProfilImg = userData.name;
-    //   this.namaP = userData.picture;
-    //   localStorage.setItem("picture", this.namaP);
-    //   localStorage.setItem("name", this.getProfilImg);
-    //   localStorage.setItem("auth-login", true);
-    //   this.$router.push({ name: "home" });
-    // },
     async Login() {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(getAuth(), provider)
         .then((result) => {
-          console.log(result.user);
+          // console.log(result.user);
           this.getProfilImg = result.user.displayName;
           this.namaP = result.user.photoURL;
           localStorage.setItem("picture", this.namaP);

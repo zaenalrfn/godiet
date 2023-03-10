@@ -27,6 +27,8 @@ export default {
       localStorage.removeItem("notifyCek");
       localStorage.removeItem("menu-alergi");
       localStorage.removeItem("status-update");
+      localStorage.removeItem("nama-update");
+      localStorage.removeItem("url-gambar");
       localStorage.setItem("auth-login", false);
       this.$router.push({ name: "login" });
     },

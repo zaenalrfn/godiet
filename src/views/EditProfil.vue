@@ -29,6 +29,12 @@
           <input type="text" v-model="namaUpdate" class="input-edit-nama" />
           <h5>Status</h5>
           <input type="text" v-model="statusUpdate" class="input-edit-status" />
+          <!-- <div class="input-status d-flex align-items-center mt-4">
+            <select class="form-select" required id="form-aktivitas">
+              <option selected value="Remaja">Remaja</option>
+              <option value="Dewasa">Dewasa</option>
+            </select>
+          </div> -->
         </form>
       </div>
       <div class="logout d-flex gap-2">

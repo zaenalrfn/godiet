@@ -4,7 +4,13 @@
     <div class="popup-hu">
       <div>
         <h3>Status</h3>
-        <input type="text" id="popup-input-hu" class="mt-1" v-model="status" />
+        <!-- <input type="text" id="popup-input-hu" class="mt-1" v-model="status" /> -->
+        <div class="input-ideal d-flex align-items-center mt-4">
+          <select class="form-select" required id="form-aktivitas">
+            <option selected value="Remaja">Remaja</option>
+            <option value="Dewasa">Dewasa</option>
+          </select>
+        </div>
       </div>
       <div class="mt-4">
         <h3>Cek Alergi</h3>
@@ -63,6 +69,12 @@ export default {
   },
   methods: {
     cekHu() {
+      let statusOptions = document.querySelector("#form-aktivitas").value;
+      if (statusOptions == "Remaja") {
+        this.status = "Remaja";
+      } else if (statusOptions == "Dewasa") {
+        this.status = "Dewasa";
+      }
       localStorage.setItem("status", this.status);
       localStorage.setItem("notifyCek", "true");
       this.NotifyCek;
