@@ -90,8 +90,8 @@ export default {
   },
   mounted() {
     this.Counter;
-    // let self = this;
-    // let parameterId = this.$route.params.id;
+    let self = this;
+    let parameterId = this.$route.params.id;
     // const options = {
     //   method: "GET",
     //   url: `https://zylalabs.com/api/392/exercise+database+api/1004/exercise+by+id?id=${[
@@ -103,6 +103,24 @@ export default {
     // };
 
     // axios(options)
+    //   .then(function (response) {
+    //     self.aktivitasId = response.data;
+    //   })
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
+    // =====================================================================
+    // const options = {
+    //   method: "GET",
+    //   url: `https://exercisedb.p.rapidapi.com/exercises/exercise/${parameterId}`,
+    //   headers: {
+    //     "X-RapidAPI-Key": "023f98117fmsh1c2705b6ac9a25fp11f719jsna2f7cf1eb86c",
+    //     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+    //   },
+    // };
+
+    // axios
+    //   .request(options)
     //   .then(function (response) {
     //     self.aktivitasId = response.data;
     //   })

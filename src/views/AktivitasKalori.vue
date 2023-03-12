@@ -93,7 +93,7 @@ export default {
     };
   },
   mounted() {
-    // let self = this;
+    let self = this;
     // const options = {
     //   method: "GET",
     //   url: `https://zylalabs.com/api/392/exercise+database+api/310/list+exercise+by+body+part?bodypart=cardio`,
@@ -103,10 +103,26 @@ export default {
     // };
     // axios(options)
     //   .then(function (response) {
-    //     if (response.data.length > 14) {
-    //       response.data.pop();
-    //       self.aktivitas = response.data;
-    //     }
+    //     self.aktivitas = response.data;
+    //   })
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
+
+    // ==========================================================================
+    // const options = {
+    //   method: "GET",
+    //   url: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/cardio",
+    //   headers: {
+    //     "X-RapidAPI-Key": "023f98117fmsh1c2705b6ac9a25fp11f719jsna2f7cf1eb86c",
+    //     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+    //   },
+    // };
+
+    // axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     self.aktivitas = response.data;
     //   })
     //   .catch(function (error) {
     //     console.error(error);
