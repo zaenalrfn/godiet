@@ -167,7 +167,7 @@ export default {
       let date = d.getDate();
       date = date < 10 ? "0" + date : date;
       const result =
-        nameMonth[d.getMonth()] + "/" + date + "/" + d.getFullYear();
+        nameMonth[d.getMonth()] + "-" + date + "-" + d.getFullYear();
       return result;
     },
   },
